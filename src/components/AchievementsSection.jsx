@@ -1,7 +1,15 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
-import AnimatedNumbers from 'react-animated-numbers';
+import React, { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
+// import AnimatedNumbers from 'react-animated-numbers';
+const AnimatedNumbers = dynamic(
+  () => {
+    return import("react-animated-numbers");
+  },
+  { ssr: false }
+);
+
 
 const achievementsList = [
   {

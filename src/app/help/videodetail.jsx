@@ -1,15 +1,15 @@
 
-import React, { useState, useRef, useEffect } from "react";
-import Image from "next/image"
-import Link from "next/link"
-import { TypeAnimation } from "react-type-animation";
-import { AnimatePresence, easeInOut, motion, useInView } from "framer-motion";
+import React from "react";
+// import Image from "next/image"
+// import Link from "next/link"
+// import { TypeAnimation } from "react-type-animation";
+// import { AnimatePresence, easeInOut, motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowRight,faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 // import { faTimes } from '@fortawesome/free-solid-svg-icons';
-
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 
 function Video_detail({onClose, num, title, video, description}){
   return (
@@ -37,7 +37,7 @@ function Video_detail({onClose, num, title, video, description}){
           opacity: { duration: 2 }
         }}
       >
-        <div className="w-3/5 h-4/5 flex flex-col rounded-lg bg-gradient-to-b from-blue-50 to-blue-100 p-2 mx-auto shadow-2xl">
+        <div className="w-3/5 h-5/6 flex flex-col rounded-lg bg-gradient-to-b from-blue-50 to-blue-100 p-2 mx-auto shadow-2xl">
           <div className="flex flex-row items-center gap-5 justify-between">
             <div className="flex flex-row gap-5 items-center">
               <div className="flex justify-between items-center">

@@ -1,13 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import Image from "next/image"
-// import Link from "next/link"
-// import { TypeAnimation } from "react-type-animation";
-// import { AnimatePresence, easeInOut, motion, useInView } from "framer-motion";
-
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-
-// import Typography from '@mui/material/Typography';
 
 function FeatureCard({ num, title, description, icon }) {
     return (

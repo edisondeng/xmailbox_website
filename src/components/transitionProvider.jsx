@@ -1,10 +1,10 @@
 "use client"
-import { AnimatePresence, motion } from "framer-motion";
-import {usePathname} from "next/navigation"
+import { AnimatePresence } from "framer-motion";
+// import {usePathname} from "next/navigation"
 import Navbar from "@/components/navbar";
 
 const TransitionProvider = ({children}) =>{
-    const pathName = usePathname();
+    // const pathName = usePathname();
     return (
         <AnimatePresence>
             <div className="lg:w-screen lg:h-screen bg-gradient-to-b from-blue-50 to-blue-300">

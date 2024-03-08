@@ -1,21 +1,14 @@
 
 "use client"
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image"
 import Link from "next/link"
-import { TypeAnimation } from "react-type-animation";
-import { AnimatePresence, easeInOut, motion, useInView } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-
-import Typography from '@mui/material/Typography';
 
 import FeatureCard from "./featurecard.jsx"
 import Feature_detail from "./featuredetail.jsx"
-
-import WavyBackground from '@/components/wavybackground';
 
 
 const easyMgnIcon = "/management.ok.png";
@@ -81,28 +74,17 @@ function AnimatedFeature({clickedPos, children, onClose}){
 }
 
 function ProductPage() {
-  const ref = useRef(null);
+  // const ref = useRef(null);
   // const isInView = useInView(ref, { once: true });
-  const isInView = useInView(ref, { once: true });
+  // const isInView = useInView(ref, { once: true });
   const [activeFeature, setActiveFeature] = useState(-1);
 
   const [clickedPos, setClickedPos] = useState(null);
 
-
-  // const videoRef = useRef(null); // 创建ref来引用视频元素
-
-  // useEffect(() => {
-  //   // 页面加载时设置视频播放速度为0.5倍速
-  //   if (videoRef.current) {
-  //     videoRef.current.playbackRate = 0.5;
-  //   }
-  // }, []); // 空依赖数组表示这个effect只在组件挂载时运行一次
-
-
-  const cardVariants = {
-    initial: { y: 50, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
-  };
+  // const cardVariants = {
+  //   initial: { y: 50, opacity: 0 },
+  //   animate: { y: 0, opacity: 1 },
+  // };
 
   const onFeatureClicked = function(index, event){
     // console.log(event);
@@ -229,7 +211,7 @@ function ProductPage() {
               onPreviousClicked={()=>setActiveFeature((activeFeature-1)<0?5:(activeFeature-1))}
             >
               <div className="w-full h-full">
-                <Image className="rounded-lg shadow-xl" src="/unlimited_storage1.jpg" width={800} height={600}/>
+                <Image alt="" className="rounded-lg shadow-xl" src="/unlimited_storage1.jpg" width={800} height={600}/>
               </div>
             </Feature_detail>
           </AnimatedFeature>
@@ -252,7 +234,7 @@ function ProductPage() {
               onPreviousClicked={()=>setActiveFeature((activeFeature-1)<0?5:(activeFeature-1))}
             >
               <div className="w-full h-full flex items-center">
-                <Image className="rounded-lg shadow-xl" src="/flexible.png" width={800} height={600}/>
+                <Image alt="" className="rounded-lg shadow-xl" src="/flexible.png" width={800} height={600}/>
               </div>
             </Feature_detail>
           </AnimatedFeature>
@@ -274,7 +256,7 @@ function ProductPage() {
               onPreviousClicked={()=>setActiveFeature((activeFeature-1)<0?5:(activeFeature-1))}            
             >
               <div className="w-full h-full flex items-center">
-                <Image className="rounded-lg shadow-xl" src="/price.png" width={800} height={600}/>
+                <Image alt="" className="rounded-lg shadow-xl" src="/price.png" width={800} height={600}/>
               </div>              
             </Feature_detail>
           </AnimatedFeature>
@@ -297,7 +279,7 @@ function ProductPage() {
               onPreviousClicked={()=>setActiveFeature((activeFeature-1)<0?5:(activeFeature-1))}                 
             >
               <div className="w-full h-full flex items-center">
-                <Image className="rounded-lg shadow-xl" src="/save.jpg" width={800} height={600}/>
+                <Image alt="" className="rounded-lg shadow-xl" src="/save.jpg" width={800} height={600}/>
               </div>  
             </Feature_detail>
           </AnimatedFeature>
@@ -319,7 +301,7 @@ function ProductPage() {
               onPreviousClicked={()=>setActiveFeature((activeFeature-1)<0?5:(activeFeature-1))}                 
             >
               <div className="w-full h-full flex items-center">
-                <Image className="rounded-lg shadow-xl" src="/feature_6.jpg" width={800} height={600}/>
+                <Image alt="" className="rounded-lg shadow-xl" src="/feature_6.jpg" width={800} height={600}/>
               </div>  
             </Feature_detail>
           </AnimatedFeature>

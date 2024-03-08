@@ -1,15 +1,12 @@
 
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import Image from "next/image"
-import Link from "next/link"
+// import Link from "next/link"
 import { TypeAnimation } from "react-type-animation";
-import { AnimatePresence, easeInOut, motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight,faTimes } from '@fortawesome/free-solid-svg-icons';
-// import { faTimes } from '@fortawesome/free-solid-svg-icons';
-
-import Typography from '@mui/material/Typography';
 
 function Feature_detail({onClose, num, title, description, icon, next, previous, onNextClicked, onPreviousClicked, children}){
   return (

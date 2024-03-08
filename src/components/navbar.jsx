@@ -1,21 +1,21 @@
 "use client"
 import Link from "next/link"
 import Image from "next/image"
-import {useState} from "react";
+// import {useState} from "react";
 
 import NavLink from "./navLink";
 
 const links = [
     {url:"/", title:"首页"},
     {url:"/product", title:"产品详情"},
-    {url:"/help", title:"使用帮助"},
+    {url:"/help", title:"视频教程"},
     // {url:"/contact", title:"联系我们"},
     {url:"https://item.taobao.com/item.htm?ft=t&id=771448479530", title:"立即购买"},
     // {url:"/contact", title:"Contact"},
 ]
 
 const Navbar = () => {
-    const [open, setOpen] = useState(false);
+    // const [open, setOpen] = useState(false);
 
     return (
         <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-sl sticky">
@@ -32,7 +32,7 @@ const Navbar = () => {
                     <span className="w-12 h-8 rounded bg-white text-black flex items-center">.dev</span>
                 </Link> */}
                 <Link href="/" >
-                    <Image src="/xmailbox.logo.black.png" width="200" height="20" />
+                    <Image src="/xmailbox.logo.black.png" width="200" height="20" alt="" />
                 </Link>
             </div>
 

@@ -3,9 +3,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { TypeAnimation } from "react-type-animation";
 // import { motion } from "framer-motion"
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import AchievementsSection from "@/components/AchievementsSection";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 
 
 const Homepage = () => {

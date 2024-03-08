@@ -1,16 +1,16 @@
 
 "use client"
 
-import React, { useState, useRef, useEffect } from "react";
-import Image from "next/image"
-import Link from "next/link"
-import { TypeAnimation } from "react-type-animation";
-import { AnimatePresence, easeInOut, motion, useInView } from "framer-motion";
+import React, { useState } from "react";
+// import Image from "next/image"
+// import Link from "next/link"
+// import { TypeAnimation } from "react-type-animation";
+import { AnimatePresence, motion } from "framer-motion";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 
 import VideoCard from "./videocard.jsx"
 import Video_detail from "./videodetail.jsx"
@@ -107,17 +107,17 @@ function AnimatedFeature({clickedPos, children, onClose}){
 }
 
 function ProductPage() {
-  const ref = useRef(null);
+  // const ref = useRef(null);
   // const isInView = useInView(ref, { once: true });
-  const isInView = useInView(ref, { once: true });
+  // const isInView = useInView(ref, { once: true });
   const [activeFeature, setActiveFeature] = useState(-1);
 
   const [clickedPos, setClickedPos] = useState(null);
 
-  const cardVariants = {
-    initial: { y: 50, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
-  };
+  // const cardVariants = {
+  //   initial: { y: 50, opacity: 0 },
+  //   animate: { y: 0, opacity: 1 },
+  // };
 
   const onFeatureClicked = function(index, event){
     // console.log(event);
@@ -136,7 +136,7 @@ function ProductPage() {
   return (
     <motion.div
       key="product" 
-      className="h-full w-full flex flex-row lg:flex-row sm:px-8 md:px-12 lg:px-20 xl:px-48 items-cetner justify-center wavy-background"
+      className="h-full w-full px-8 wavy-background flex items-center justify-center"
       // className="flex flex-col md:flex-row items-center justify-center w-full"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -144,9 +144,9 @@ function ProductPage() {
     >
 
     {/* TEXT CONTAINER */}
-    <div className="mt-10 lg:mt-0 h-1/2 lg:h-full lg:w-full flex flex-col gap-1 items-center lg:justify-center">
+    <div className="mt-10 lg:mt-0 w-full h-full flex flex-col gap-1 items-center justify-center">
       {/* <ul className="grid md:grid-cols-3 gap-1 md:gap-1"> */}
-      <ul className="flex flex-row md:gap-1">
+      <ul className="flex flex-row flex-wrap md:gap-6 items-center justify-center">
         {videoData.map((feature, index) => (
           <motion.li
             key={index}
@@ -191,134 +191,6 @@ function ProductPage() {
           ) : null
         ))}
       </AnimatePresence>
-{/* 
-      <AnimatePresence>
-        {activeFeature===0 && 
-          <AnimatedFeature clickedPos={clickedPos} onClose={()=>setActiveFeature(-1)}>
-            <Video_detail onClose={()=>setActiveFeature(-1)} 
-              num={videoData[0].id} 
-              title={videoData[0].title}
-              video={videoData[0].video}
-              next={videoData[1].title}
-              previous={videoData[6].title}
-              onNextClicked={()=>setActiveFeature((activeFeature+1)%6)}
-              onPreviousClicked={()=>setActiveFeature((activeFeature-1)<0?5:(activeFeature-1))}
-            >
-            </Video_detail>
-          </AnimatedFeature>
-        }
-        {activeFeature===1 && 
-          <AnimatedFeature clickedPos={clickedPos} onClose={()=>setActiveFeature(-1)}>
-            <Video_detail onClose={()=>setActiveFeature(-1)}
-              num={features[1][0]} 
-              title={features[1][1]}
-              // description={"XMAILBOX 邮箱盒子内置10G存储空间，同时支持SSD硬盘拓展，用户可以自行插入一块SSD硬盘扩容，真正实现无限容量。"}
-              // description={Video_detail_desc[1]}
-              icon={features[1][3]}
-              next={features[2][1]}
-              previous={features[0][1]}
-              onNextClicked={()=>{
-                console.log("activeFeature=", activeFeature);
-                setActiveFeature((activeFeature+1)%6);
-              }}
-              onPreviousClicked={()=>setActiveFeature((activeFeature-1)<0?5:(activeFeature-1))}
-            >
-              <div className="w-full h-full">
-                <Image className="rounded-lg shadow-xl" src="/unlimited_storage1.jpg" width={800} height={600}/>
-              </div>
-            </Video_detail>
-          </AnimatedFeature>
-        }
-        {activeFeature===2 && 
-          <AnimatedFeature clickedPos={clickedPos} onClose={()=>setActiveFeature(-1)}>
-            <Video_detail onClose={()=>setActiveFeature(-1)}
-              num={features[2][0]} 
-              title={features[2][1]}
-              description={Video_detail_desc[2]}
-              icon={features[2][3]} 
-              next={features[3][1]}
-              previous={features[1][1]}
-              onNextClicked={()=>{
-                console.log("activeFeature=", activeFeature);
-                setActiveFeature((activeFeature+1)%6);
-              }}
-              onPreviousClicked={()=>setActiveFeature((activeFeature-1)<0?5:(activeFeature-1))}
-            >
-              <div className="w-full h-full flex items-center">
-                <Image className="rounded-lg shadow-xl" src="/flexible.png" width={800} height={600}/>
-              </div>
-            </Video_detail>
-          </AnimatedFeature>
-        }
-        {activeFeature===3 &&
-          <AnimatedFeature clickedPos={clickedPos} onClose={()=>setActiveFeature(-1)}>
-            <Video_detail onClose={()=>setActiveFeature(-1)}
-              num={features[3][0]} 
-              title={features[3][1]}
-              // description={"XMAILBOX 邮箱盒子支持SMTP协议、IMAPs、POP3s等多种标准邮件协议。用户可以使用WebMail、 PC邮件客户端、手机邮件客户端随时随地访问自己信箱。"}              
-              description={Video_detail_desc[3]}
-              icon={features[3][3]} 
-              next={features[4][1]}
-              previous={features[2][1]}
-              onNextClicked={()=>{
-                console.log("activeFeature=", activeFeature);
-                setActiveFeature((activeFeature+1)%6);
-              }}
-              onPreviousClicked={()=>setActiveFeature((activeFeature-1)<0?5:(activeFeature-1))}            
-            >
-              <div className="w-full h-full flex items-center">
-                <Image className="rounded-lg shadow-xl" src="/price.png" width={800} height={600}/>
-              </div>              
-            </Video_detail>
-          </AnimatedFeature>
-        }
-
-        {activeFeature===4 &&
-          <AnimatedFeature clickedPos={clickedPos} onClose={()=>setActiveFeature(-1)}>
-            <Video_detail onClose={()=>setActiveFeature(-1)}
-              num={features[4][0]} 
-              title={features[4][1]}
-              // description={"相比云邮箱，每年"}
-              description={Video_detail_desc[4]}
-              icon={features[4][3]} 
-              next={features[5][1]}
-              previous={features[3][1]}
-              onNextClicked={()=>{
-                console.log("activeFeature=", activeFeature);
-                setActiveFeature((activeFeature+1)%6);
-              }}
-              onPreviousClicked={()=>setActiveFeature((activeFeature-1)<0?5:(activeFeature-1))}                 
-            >
-              <div className="w-full h-full flex items-center">
-                <Image className="rounded-lg shadow-xl" src="/save.jpg" width={800} height={600}/>
-              </div>  
-            </Video_detail>
-          </AnimatedFeature>
-        }
-
-        {activeFeature===5 &&
-          <AnimatedFeature clickedPos={clickedPos} onClose={()=>setActiveFeature(-1)}>
-            <Video_detail onClose={()=>setActiveFeature(-1)}
-              num={features[5][0]} 
-              title={features[5][1]}
-              description={Video_detail_desc[5]}
-              icon={features[5][3]} 
-              next={features[0][1]}
-              previous={features[4][1]}
-              onNextClicked={()=>{
-                console.log("activeFeature=", activeFeature);
-                setActiveFeature((activeFeature+1)%6);
-              }}
-              onPreviousClicked={()=>setActiveFeature((activeFeature-1)<0?5:(activeFeature-1))}                 
-            >
-              <div className="w-full h-full flex items-center">
-                <Image className="rounded-lg shadow-xl" src="/feature_6.jpg" width={800} height={600}/>
-              </div>  
-            </Video_detail>
-          </AnimatedFeature>
-        }
-
-      </AnimatePresence> */}
     </div>
   </motion.div>
   );
