@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@keyframes waveAnimation {
+    0%, 100% {
+      background-position: -50px -50px;
+    }
+    50% {
+      background-position: 100px 0px; /* 根据需要调整波动的幅度 */
+    }
+  }
+  
+  .wavy-background {
+    @apply bg-no-repeat bg-cover h-full w-full; /* 应用 Tailwind CSS 实用工具类 */
+    background-image: url('/BOX.bg.1.png'); /* 设置背景图像 */
+    animation: waveAnimation 20s infinite linear; /* 应用自定义动画 */
+  }
+
+  .wavy-background-small {
+    @apply bg-no-repeat bg-cover; /* 应用 Tailwind CSS 实用工具类 */
+    background-image: url('/BOX.bg.1.png'); /* 设置背景图像 */
+    animation: waveAnimation 20s infinite linear; /* 应用自定义动画 */
+  }

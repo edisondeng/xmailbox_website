@@ -7,13 +7,11 @@ const TransitionProvider = ({children}) =>{
     const pathName = usePathname();
     return (
         <AnimatePresence>
-            <div className="h-[1000vh] lg:w-screen lg:h-screen bg-gradient-to-b from-blue-50 to-blue-300">
+            <div className="lg:w-screen lg:h-screen bg-gradient-to-b from-blue-50 to-blue-300">
                 <div className="h-16">
                     <Navbar />
                 </div>
-                <div
-                    className="h-[calc(100vh-4rem)] z-40"
-                >
+                <div className="w-full h-[calc(100vh-4rem)] z-40">
                     {children}
                 </div>
             </div>

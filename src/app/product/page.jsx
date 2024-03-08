@@ -12,6 +12,11 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 import Typography from '@mui/material/Typography';
 
+import FeatureCard from "./featurecard.jsx"
+import Feature_detail from "./featuredetail.jsx"
+
+import WavyBackground from '@/components/wavybackground';
+
 
 const easyMgnIcon = "/management.ok.png";
 const safeIcon = "/safe.ok.png";
@@ -21,154 +26,6 @@ const saveMoneyIcon = "/save.money.ok.png";
 const cooperateIcon = "/cooperate.ok.png";
 
 
-function FeatureCard({ num, title, description, icon }) {
-  return (
-    <div 
-      // className="border border-gray-200 bg-blue-100 rounded-lg shadow-md p-3 m-2"
-      className="border border-gray-200 bg-blue-50 rounded-lg shadow-md p-3 m-3 sd:w-4/5 lg:w-3/4 lg:h-[250px]"
-      // onClick = {onClicked}
-    >
-      <div className="flex flex-row lg:flex-col gap-4">
-        <div className="flex justify-between items-center">
-          <div
-            className="flex justify-center items-center w-12 h-12 bg-blue-500 rounded-lg text-center text-white font-bold mb-2"
-          >
-            {num}
-          </div>
-          <Image width={50} height={50} src={icon} alt="" />
-        </div>
-
-        <h3 className="text-lg font-bold mb-2">
-          {title}
-        </h3>
-      </div>
-      <p className="text-base font-normal">
-        {description}
-      </p>
-      <p className="text-base font-normal mt-3 mr-3 text-blue-600 flex flex-row justify-end">
-        了解更多
-      </p>
-    </div>
-  );
-}
-
-function Feature_detail({onClose, num, title, description, icon, next, previous, onNextClicked, onPreviousClicked, children}){
-  return (
-    <div className="">
-      {/* <Image src="/easymgn.1.png" width="1200" height="500" alt=""/> */}
-      {/* <video src="/add_email.mp4" autoPlay/> */}
-      <motion.div className="flex items-center justify-center w-screen h-screen"
-        key={num}
-        initial={{x:0, y:0, width:10, height:10}}
-        animate={{
-          x: 0,
-          y: 0,
-          width: "100vw",
-          height: "100vh",
-          opacity: 1
-        }}
-        exit={{
-          // width: "0vw",
-          // height: "0vh",
-          opacity: 0
-        }}
-        // transition={{ 
-        //   duration: 1
-        // }}
-        transition={{ 
-          // y:{duration: 3 },
-          opacity: { duration: 3 }
-        }}
-      >
-        <div className="w-3/5 h-4/5 flex flex-col rounded-lg bg-gradient-to-b from-blue-50 to-blue-100 p-3 mx-auto shadow-2xl">
-          <div className="flex flex-row items-center gap-10 justify-between">
-            <div className="flex flex-row gap-10 items-center">
-              <div className="flex justify-between items-center">
-                <div
-                  className="flex justify-center items-center w-16 h-16 bg-blue-500 rounded-lg text-center text-white font-bold mb-2"
-                >
-                  {num}
-                </div>
-                {/* <img className="w-15 h-15" src={icon} alt="" /> */}
-              </div>
-              <h3 className="text-2xl font-bold mb-2">
-                {title}
-              </h3>
-            </div>
-            <Image width={50} height={50} src={icon} alt="" />
-          </div>
-
-          <div className="flex flex-row h-full mt-6 gap-10 items-start justify-aroun">
-            {/* <p className="text-lg font-normal">               */}
-            <div className="md:text-xl mt-6 px-10 w-1/3 h-full flex flex-col items-start">
-              <TypeAnimation
-                className="h-2/4"
-                sequence={[
-                  description,
-                  10000,
-                  '',
-                  1000,
-                  description,
-                  10000,
-                  '',
-                  1000
-                ]}
-                wrapper="span"
-                speed={10}
-                style={{ fontSize: '1em', display: 'inline-block' }}
-                repeat={Infinity}
-                cursor={false}
-              />
-              {/* <Image width={50} height={50} src={"next"} alt="" /> */}
-            </div>
-            <div className="w-2/3">{children}</div>
-          </div>
-
-          <div className="flex flex-row justify-between gap-4 mt-4 animate-bounce"> {/* 为图标添加 margin-top */}
-            {/* <FontAwesomeIcon icon={faArrowLeft} className="text-black text-2xl hover:ring-2 hover:ring-blue-300 rounded-full" />
-            <FontAwesomeIcon icon={faArrowRight} className="text-black text-2xl hover:ring-2 hover:ring-blue-300 rounded-full" /> */}
-            <div className="group"
-              onClick={(e)=>{
-                onPreviousClicked();
-                e.stopPropagation();
-              }}
-            >
-              <FontAwesomeIcon icon={faArrowLeft} className="text-2xl hover:ring-blue-300 rounded-full cursor-pointer"/>
-              <span className="absolute right-full ml-2 w-auto p-2 m-2 min-w-max text-sm text-white bg-black rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-10">
-                {previous}
-              </span>
-            </div>
-            <div className="group"
-              onClick={(e)=>{
-                onNextClicked();
-                e.stopPropagation();
-              }}
-            >
-              <FontAwesomeIcon icon={faArrowRight} className="text-2xl hover:ring-blue-300 rounded-full cursor-pointer" />
-              <span className="absolute left-full ml-2 w-auto p-2 m-2 min-w-max text-sm text-white bg-black rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-10">
-                {next}
-              </span>
-            </div>
-          </div>
-        </div>
-
-
-      </motion.div>
-
-      <div 
-        className="absolute top-0 right-0 m-2 cursor-pointer"
-        onClick={onClose}
-        style={{ width: '30px', height: '30px', backgroundColor: 'white' }}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </div>
-
-    </div>
-  );
-}
-
 const features = [
   [1, "无限账户", "邮箱盒子支持无限邮箱、无限别名。实现轻松管理多个域名的邮箱账号。", easyMgnIcon],
   [2, "无限扩容", "邮箱盒子支持SSD硬盘扩容，用户可以自行插入一个SSD硬盘，彻底打破云邮箱服务容量限制。", storageIcon],
@@ -176,6 +33,15 @@ const features = [
   [4, "高性价比", "即刻省去高昂的年费，不再需要为额外的域名、额外的邮件账户数、超额邮箱空间支付费用。", saveMoneyIcon],
   [5, "安全可靠", "所有邮件数据都保存在邮箱盒子里，邮箱盒子存放在您自己办公室里，确保核心数据不会外泄。", safeIcon],
   [6, "无缝协作", "邮箱盒子同时提供文件共享功能，便于局域网PC之间传递与共享文件，从而实现无缝协作。", cooperateIcon],
+]
+
+const feature_detail_desc=[
+  "XMAILBOX 邮箱盒子重新定义邮箱管理的自由和灵活性。我们特别设计了无限制的服务特性：不设限的邮箱数量、域名绑定，以及别名邮箱数量，全面满足您的所有需求。企业管理员更是拥有前所未有的灵活性，可以根据业务需求或团队变动，随时增加或删除邮箱账户，确保通信渠道的及时更新与优化。立刻加入XMAILBOX，让我们助您打造最具弹性的邮件通信环境。",
+  "XMAILBOX 邮箱盒子将存储革命带入您的手中，通过支持SSD硬盘扩容的先进功能，让您轻松突破传统云邮箱服务的存储界限。现在，您可以直接插入一个SSD硬盘，按需扩展存储空间，无需担心文件大小或邮箱容量的限制。这不仅意味着更快的数据访问速度和更高的存储效率，也意味着您完全掌控自己的数据和资源。",
+  "无论您身处何地，不论是在公司内部还是在旅途中，XMAILBOX 邮箱盒子都确保您能够无缝接入自己的邮箱。我们全面支持WebMail、PC邮件客户端、以及手机邮件客户端，我们支持SMTP、IMAPs、POP3s等各种标准邮件协议。XMAILBOX 让每一次邮箱访问都变得异常轻松。",
+  "XMAILBOX 邮箱盒子让您从年费的负担中解放出来，彻底摆脱了对额外域名、邮件账户以及超额邮箱空间的额外支付。选择XMAILBOX，意味着您将享受到超高的经济效益，一次性投资，终身受益。立即加入XMAILBOX，开启您高效、节约的邮箱管理新篇章。",
+  "所有邮件数据安全地存储在您的办公室里的 XMAILBOX 邮箱盒子中，确保您的宝贵信息永远在您的控制之下。您拥有对数据的完全所有权和控制权，无需担心外部干扰或数据泄露的风险。同时 XMAILBOX 引入了业界领先的安全协议——https, IMAPs, POP3s, 以及 SMTP SASL，为您的邮件传输过程提供银行级别的安全保护，有效防止黑客攻击和数据窃取，确保每一封邮件的安全和私密性。",
+  "XMAILBOX 邮箱盒子打破传统边界，加入了创新的文件共享功能。使得局域网内的PC间文件传输与共享变得轻而易举，无论是文档、表格还是演示文稿，都可以在团队成员之间迅速而安全地流转。借助XMAILBOX，您的团队可以体验到真正意义上的无缝协作，都能即刻同步工作进度，加速决策流程，确保每个项目都能够高效推进。选择XMAILBOX，开启智能高效的工作方式，让每一次合作都充满无限可能。"
 ]
 
 
@@ -207,16 +73,12 @@ function AnimatedFeature({clickedPos, children, onClose}){
         height: clickedPos.height,
         opacity: 0
       }}
-
       transition={{duration:1, ease:"easeInOut"}}
     >
       {children}
     </motion.div>
   );
 }
-
-
-
 
 function ProductPage() {
   const ref = useRef(null);
@@ -259,7 +121,7 @@ function ProductPage() {
   return (
     <motion.div
       key="product" 
-      className="h-full w-full flex flex-row lg:flex-row sm:px-8 md:px-12 lg:px-20 xl:px-48 items-cetner justify-center"
+      className="h-full w-full flex flex-row lg:flex-row px-4 items-cetner justify-center wavy-background"
       // className="flex flex-col md:flex-row items-center justify-center w-full"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -268,9 +130,9 @@ function ProductPage() {
 
     {/* TEXT CONTAINER */}
     {/* <div className="h-1/2 lg:h-full lg:w-full flex flex-col gap-8 items-cetner justify-center"> */}
-    <div className="mt-10 lg:mt-0 h-1/2 lg:h-full lg:w-full flex flex-col gap-8 items-center lg:justify-center">
+    <div className="mt-4 xl:p-24 2xl=48 lg:mt-0 h-1/2 lg:h-full w-full flex flex-col gap-2 2xl:gap-8 items-center lg:justify-center">
       {/* {Title} */}
-      <h1 className="text-2xl md:text-4xl font-bold">
+      <h1 className="text-2xl 2xl:text-4xl font-bold">
         轻松搭建企业邮箱
       </h1>
       {/* DESC */}
@@ -278,9 +140,10 @@ function ProductPage() {
         中小企业最佳选择
       </p>
 
-      <ul className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul className="grid md:grid-cols-3 w-full 2xl:w-3/4 gap-8 2xl:gap-16">
         {features.map((feature, index) => (
           <motion.li
+            className="flex flex-row items-center justify-center"
             key={index}
             // variants={cardVariants}
             // initial="initial"
@@ -288,7 +151,7 @@ function ProductPage() {
             initial={{y:-20}}
             animate = {{y:0, opacity: 1}}
             transition={{ 
-              y:{duration: 0.3, delay: index * 0.1 },
+              y:{duration: 1, delay: index * 0.2 },
               scale: { duration: 0.2 }
             }}
             whileHover={{
@@ -327,7 +190,8 @@ function ProductPage() {
             <Feature_detail onClose={()=>setActiveFeature(-1)} 
               num={features[0][0]} 
               title={features[0][1]}
-              description={"XMAILBOX 不限邮箱数量、不限域名绑定数量、不限别名邮箱数量。企业管理员可以根据需要随意增删邮箱。"}
+              // description={"XMAILBOX 不限邮箱数量、不限域名绑定数量、不限别名邮箱数量。企业管理员可以根据需要随意增删邮箱。"}
+              description={feature_detail_desc[0]}
               icon={features[0][3]}
               next={features[1][1]}
               previous={features[5][1]}
@@ -353,8 +217,9 @@ function ProductPage() {
             <Feature_detail onClose={()=>setActiveFeature(-1)}
               num={features[1][0]} 
               title={features[1][1]}
-              description={"XMAILBOX 邮箱盒子内置10G存储空间，同时支持SSD硬盘拓展，用户可以自行插入一块SSD硬盘扩容，真正实现无限容量。"}
-              icon={features[1][3]} 
+              // description={"XMAILBOX 邮箱盒子内置10G存储空间，同时支持SSD硬盘拓展，用户可以自行插入一块SSD硬盘扩容，真正实现无限容量。"}
+              description={feature_detail_desc[1]}
+              icon={features[1][3]}
               next={features[2][1]}
               previous={features[0][1]}
               onNextClicked={()=>{
@@ -363,14 +228,103 @@ function ProductPage() {
               }}
               onPreviousClicked={()=>setActiveFeature((activeFeature-1)<0?5:(activeFeature-1))}
             >
-              <Image className="rounded-lg shadow-xl"
-                src="/unlimited_storage.jpg" width={600} height={600}/>
+              <div className="w-full h-full">
+                <Image className="rounded-lg shadow-xl" src="/unlimited_storage1.jpg" width={800} height={600}/>
+              </div>
             </Feature_detail>
-          </AnimatedFeature>}
-      {/*  {activeFeature===2 && <AnimatedFeature clickedPos={clickedPos} onClose={()=>setActiveFeature(-1)}><Feature_1 onClose={()=>setActiveFeature(-1)}/></AnimatedFeature>}
-        {activeFeature===3 && <AnimatedFeature clickedPos={clickedPos} onClose={()=>setActiveFeature(-1)}><Feature_1 onClose={()=>setActiveFeature(-1)}/></AnimatedFeature>}
-        {activeFeature===4 && <AnimatedFeature clickedPos={clickedPos} onClose={()=>setActiveFeature(-1)}><Feature_1 onClose={()=>setActiveFeature(-1)}/></AnimatedFeature>}
-        {activeFeature===5 && <AnimatedFeature clickedPos={clickedPos} onClose={()=>setActiveFeature(-1)}><Feature_1 onClose={()=>setActiveFeature(-1)}/></AnimatedFeature>} */}
+          </AnimatedFeature>
+        }
+        {activeFeature===2 && 
+          <AnimatedFeature clickedPos={clickedPos} onClose={()=>setActiveFeature(-1)}>
+            <Feature_detail onClose={()=>setActiveFeature(-1)}
+              num={features[2][0]} 
+              title={features[2][1]}
+              // description={"XMAILBOX 邮箱盒子支持SMTP协议、IMAPs、POP3s等多种标准邮件协议。用户可以使用WebMail、 PC邮件客户端、手机邮件客户端随时随地访问自己信箱。"}
+              // description={"XMAILBOX 邮箱盒子不仅仅是一个邮箱服务，它是您全方位通讯解决方案的核心。我们深知在不同设备上随时随地访问电子邮件的重要性，因此，XMAILBOX 支持SMTP协议、IMAPs、POP3s等众多标准邮件协议，确保您无论使用WebMail、PC邮件客户端还是手机邮件客户端，都能体验到流畅、可靠的邮件接收和发送服务。立即加入XMAILBOX，享受极致的邮件管理自由。无论您身处何地，无论使用何种设备，XMAILBOX 为您提供强大的兼容性和灵活性，让您的每一次沟通都无比顺畅。选择XMAILBOX，让我们一起重塑邮件通讯的未来。"}
+              description={feature_detail_desc[2]}
+              icon={features[2][3]} 
+              next={features[3][1]}
+              previous={features[1][1]}
+              onNextClicked={()=>{
+                console.log("activeFeature=", activeFeature);
+                setActiveFeature((activeFeature+1)%6);
+              }}
+              onPreviousClicked={()=>setActiveFeature((activeFeature-1)<0?5:(activeFeature-1))}
+            >
+              <div className="w-full h-full flex items-center">
+                <Image className="rounded-lg shadow-xl" src="/flexible.png" width={800} height={600}/>
+              </div>
+            </Feature_detail>
+          </AnimatedFeature>
+        }
+        {activeFeature===3 &&
+          <AnimatedFeature clickedPos={clickedPos} onClose={()=>setActiveFeature(-1)}>
+            <Feature_detail onClose={()=>setActiveFeature(-1)}
+              num={features[3][0]} 
+              title={features[3][1]}
+              // description={"XMAILBOX 邮箱盒子支持SMTP协议、IMAPs、POP3s等多种标准邮件协议。用户可以使用WebMail、 PC邮件客户端、手机邮件客户端随时随地访问自己信箱。"}              
+              description={feature_detail_desc[3]}
+              icon={features[3][3]} 
+              next={features[4][1]}
+              previous={features[2][1]}
+              onNextClicked={()=>{
+                console.log("activeFeature=", activeFeature);
+                setActiveFeature((activeFeature+1)%6);
+              }}
+              onPreviousClicked={()=>setActiveFeature((activeFeature-1)<0?5:(activeFeature-1))}            
+            >
+              <div className="w-full h-full flex items-center">
+                <Image className="rounded-lg shadow-xl" src="/price.png" width={800} height={600}/>
+              </div>              
+            </Feature_detail>
+          </AnimatedFeature>
+        }
+
+        {activeFeature===4 &&
+          <AnimatedFeature clickedPos={clickedPos} onClose={()=>setActiveFeature(-1)}>
+            <Feature_detail onClose={()=>setActiveFeature(-1)}
+              num={features[4][0]} 
+              title={features[4][1]}
+              // description={"相比云邮箱，每年"}
+              description={feature_detail_desc[4]}
+              icon={features[4][3]} 
+              next={features[5][1]}
+              previous={features[3][1]}
+              onNextClicked={()=>{
+                console.log("activeFeature=", activeFeature);
+                setActiveFeature((activeFeature+1)%6);
+              }}
+              onPreviousClicked={()=>setActiveFeature((activeFeature-1)<0?5:(activeFeature-1))}                 
+            >
+              <div className="w-full h-full flex items-center">
+                <Image className="rounded-lg shadow-xl" src="/save.jpg" width={800} height={600}/>
+              </div>  
+            </Feature_detail>
+          </AnimatedFeature>
+        }
+
+        {activeFeature===5 &&
+          <AnimatedFeature clickedPos={clickedPos} onClose={()=>setActiveFeature(-1)}>
+            <Feature_detail onClose={()=>setActiveFeature(-1)}
+              num={features[5][0]} 
+              title={features[5][1]}
+              description={feature_detail_desc[5]}
+              icon={features[5][3]} 
+              next={features[0][1]}
+              previous={features[4][1]}
+              onNextClicked={()=>{
+                console.log("activeFeature=", activeFeature);
+                setActiveFeature((activeFeature+1)%6);
+              }}
+              onPreviousClicked={()=>setActiveFeature((activeFeature-1)<0?5:(activeFeature-1))}                 
+            >
+              <div className="w-full h-full flex items-center">
+                <Image className="rounded-lg shadow-xl" src="/feature_6.jpg" width={800} height={600}/>
+              </div>  
+            </Feature_detail>
+          </AnimatedFeature>
+        }
+
       </AnimatePresence>
     </div>
   </motion.div>
