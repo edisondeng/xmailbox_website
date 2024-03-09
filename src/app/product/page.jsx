@@ -10,6 +10,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import FeatureCard from "./featurecard.jsx"
 import Feature_detail from "./featuredetail.jsx"
 
+import settings from "@/components/constants.jsx";
 
 const easyMgnIcon = "/management.ok.png";
 const safeIcon = "/safe.ok.png";
@@ -159,7 +160,7 @@ function ProductPage() {
       {/* BUTTONS */}
       <div className="w-full flex gap-12 p-3 items-center justify-center">
         <button className="p-4 rounded-lg ring-1 ring-green bg-black text-white transition duration-300 ease-in-out hover:shadow-outline">
-          <Link href="/shopnow">立即购买</Link>
+          <Link href={settings.taobao}>立即购买</Link>
         </button>
       </div>
 

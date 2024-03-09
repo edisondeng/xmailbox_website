@@ -3,6 +3,8 @@ import Link from "next/link"
 import Image from "next/image"
 // import {useState} from "react";
 
+import settings from "./constants.jsx";
+
 import NavLink from "./navLink";
 
 const links = [
@@ -10,7 +12,7 @@ const links = [
     {url:"/product", title:"产品详情"},
     {url:"/help", title:"视频教程"},
     // {url:"/contact", title:"联系我们"},
-    {url:"https://item.taobao.com/item.htm?ft=t&id=771448479530", title:"立即购买"},
+    {url:settings.taobao, title:"立即购买"},
     // {url:"/contact", title:"Contact"},
 ]
 
