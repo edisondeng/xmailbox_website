@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import AchievementsSection from "@/components/AchievementsSection";
 // import dynamic from "next/dynamic";
 
+import ModelViewer from "@/components/box_3d";
 
 const Homepage = () => {
   return (
@@ -22,11 +23,20 @@ const Homepage = () => {
         {/* IMAGE CONTAINER */}
         <div className="w-full h-2/5 md:w-3/5 md:h-full lg:w-1/2 flex flex-col items-center justify-around">
           <div className="relative w-4/5 h-4/5 md:w-2/3 md:h-2/3">
-            <Image 
+            {/* <Image 
               src="/BOX4.25.1.png"
               alt="" 
               layout="fill"
               objectFit="contain" // 或者 "cover" 根据你的需求
+            /> */}
+            <div className="absolute top-0 left-0 m-4">
+              {/* 使用img元素显示自定义图标 */}
+              <img src="/mouse.png" alt="3D Control" width="40" height="40" />
+            </div>
+            <ModelViewer
+              // scale = initialScale,
+              position = {[0,1,0]}
+              rotation = {[0.5, 0, -0.2]}
             />
           </div>
         </div>
