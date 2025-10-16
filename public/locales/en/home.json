@@ -1,0 +1,34 @@
+{
+  "title": "Complete Business Email Solution",
+  "subtitle": "Easily set up business email with unlimited accounts, unlimited expansion, flexible and efficient",
+  "heroTitle": "Complete Business Email Solution",
+  "heroSubtitle": "Easily set up business email with unlimited accounts, unlimited expansion, flexible and efficient",
+  "productDetails": "Product Details",
+  "buyNow": "Buy Now",
+  "features": {
+    "unlimitedAccounts": {
+      "title": "Unlimited Accounts",
+      "description": "Create unlimited email accounts for your business to meet various operational needs"
+    },
+    "unlimitedStorage": {
+      "title": "Unlimited Storage",
+      "description": "Expand storage capacity anytime to meet growing business data requirements"
+    },
+    "flexible": {
+      "title": "Flexible & Efficient",
+      "description": "Flexible configuration options with high-efficiency email processing capabilities"
+    }
+  },
+  "whyChoose": {
+    "title": "Why Choose Us",
+    "description": "Professional business email solutions to drive your digital transformation",
+    "professional": "Professional Team",
+    "secure": "Secure & Reliable",
+    "support": "24/7 Support"
+  },
+  "achievements": {
+    "companies": "Companies",
+    "domains": "Domains",
+    "mailboxes": "Mailboxes"
+  }
+}

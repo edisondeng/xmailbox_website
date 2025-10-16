@@ -1,0 +1,27 @@
+{
+  "title": "ビジネスメール完全ソリューション",
+  "subtitle": "簡単なビジネスメール設定、無制限アカウント、無制限拡張、柔軟で効率的",
+  "heroTitle": "ビジネスメール完全ソリューション",
+  "heroSubtitle": "簡単なビジネスメール設定、無制限アカウント、無制限拡張、柔軟で効率的",
+  "productDetails": "製品詳細",
+  "buyNow": "今すぐ購入",
+  "features": {
+    "unlimitedAccounts": {
+      "title": "無制限アカウント",
+      "description": "ビジネス用に無制限のメールアカウントを作成し、様々な運用ニーズに対応"
+    },
+    "unlimitedStorage": {
+      "title": "無制限ストレージ",
+      "description": "ストレージ容量をいつでも拡張し、成長するビジネスデータ要件に対応"
+    },
+    "flexible": {
+      "title": "柔軟で効率的",
+      "description": "柔軟な設定オプションと高効率なメール処理機能"
+    }
+  },
+  "achievements": {
+    "companies": "企業数",
+    "domains": "ドメイン数",
+    "mailboxes": "メールボックス数"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "title": "開條ビデオ",
+  "description": "XMAILBOXメールボックスはTYPE-C電源ケーブルとLANケーブルを1本ずつ同梱しています。",
+  "networkConfig": {
+    "title": "ネットワーク設定",
+    "description": "XMAILBOXメールボックスの出荷時デフォルトIPアドレスは192.168.6.250です"
+  },
+  "domainEmail": {
+    "title": "ドメインとメールボックス",
+    "description": "XMAILBOXメールボックス管理画面のURLデフォルトは https://192.168.6.250/admin/です"
+  },
+  "pcClient": {
+    "title": "PCメールクライアント設定",
+    "description": "XMAILBOXメールボックスはPCメールクライアントをサポートしています。ビデオチュートリアルを参考にPCメールクライアントを設定してください。"
+  },
+  "mobileClient": {
+    "title": "モバイルメールクライアント設定",
+    "description": "XMAILBOXメールボックスはモバイルメールクライアントをサポートしています。ビデオチュートリアルを参考にモバイルメールクライアントを設定してください。"
+  },
+  "fileSharing": {
+    "title": "WINDOWSファイル共有",
+    "description": "XMAILBOXメールボックスはファイル共有機能を備えています。ビデオをご参照ください。"
+  },
+  "reset": {
+    "title": "メールボックスリセット",
+    "description": "ボックスのIPアドレスを忘れた場合、または設定した管理者のユーザー名とパスワードを忘れた場合は、このビデオを参考にリセットしてください。"
+  }
+}

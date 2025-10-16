@@ -1,0 +1,28 @@
+{
+  "title": "개봉 비디오",
+  "description": "XMAILBOX 메일 박스는 TYPE-C 전원 케이블과 네트워크 케이블을 함께 제공합니다.",
+  "networkConfig": {
+    "title": "네트워크 설정",
+    "description": "XMAILBOX 메일 박스 공장 기본 IP 주소는 192.168.6.250입니다"
+  },
+  "domainEmail": {
+    "title": "도메인 및 메일함",
+    "description": "XMAILBOX 메일 박스 관리 인터페이스 URL 기본값은 https://192.168.6.250/admin/입니다"
+  },
+  "pcClient": {
+    "title": "PC 메일 클라이언트 설정",
+    "description": "XMAILBOX 메일 박스는 PC 메일 클라이언트를 지원합니다. 비디오 튜토리얼을 참조하여 PC 메일 클라이언트를 설정하세요."
+  },
+  "mobileClient": {
+    "title": "모바일 메일 클라이언트 설정",
+    "description": "XMAILBOX 메일 박스는 모바일 메일 클라이언트를 지원합니다. 비디오 튜토리얼을 참조하여 모바일 메일 클라이언트를 설정하세요."
+  },
+  "fileSharing": {
+    "title": "WINDOWS 파일 공유",
+    "description": "XMAILBOX 메일 박스는 파일 공유 기능을 갖추고 있습니다. 비디오를 참조하세요."
+  },
+  "reset": {
+    "title": "메일 박스 재설정",
+    "description": "박스의 IP 주소를 잊어버리거나 설정한 관리자 사용자 이름과 비밀번호를 잊어버린 경우, 이 비디오를 참조하여 재설정하세요."
+  }
+}

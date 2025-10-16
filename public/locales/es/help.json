@@ -1,0 +1,28 @@
+{
+  "title": "Video de Unboxing",
+  "description": "XMAILBOX mailbox viene con un cable de alimentación TYPE-C y un cable de red.",
+  "networkConfig": {
+    "title": "Configuración de Red",
+    "description": "La dirección IP predeterminada de fábrica de XMAILBOX mailbox es 192.168.6.250"
+  },
+  "domainEmail": {
+    "title": "Dominio y Buzón",
+    "description": "La URL predeterminada de la interfaz de administración de XMAILBOX mailbox es https://192.168.6.250/admin/"
+  },
+  "pcClient": {
+    "title": "Configurar Cliente de Correo PC",
+    "description": "XMAILBOX mailbox soporta clientes de correo PC. Por favor consulte el video tutorial para configurar su cliente de correo PC."
+  },
+  "mobileClient": {
+    "title": "Configurar Cliente de Correo Móvil",
+    "description": "XMAILBOX mailbox soporta clientes de correo móvil. Por favor consulte el video tutorial para configurar su cliente de correo móvil."
+  },
+  "fileSharing": {
+    "title": "Compartir Archivos WINDOWS",
+    "description": "XMAILBOX mailbox tiene función de compartir archivos. Por favor consulte el video."
+  },
+  "reset": {
+    "title": "Restablecer Mailbox",
+    "description": "Si olvidaste la dirección IP de la caja o olvidaste el nombre de usuario y contraseña de administrador que configuraste, por favor consulta este video para restablecer."
+  }
+}

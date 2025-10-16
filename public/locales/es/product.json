@@ -1,0 +1,41 @@
+{
+  "title": "Detalles del Producto",
+  "subtitle": "La Mejor Opción para PYMEs",
+  "description": "Configura fácilmente email empresarial, proporcionando soluciones de email profesionales para empresas",
+  "heroTitle": "Configura Fácilmente Email Empresarial",
+  "heroSubtitle": "La Mejor Opción para Pequeñas y Medianas Empresas",
+  "buyNow": "Comprar Ahora",
+  "features": {
+    "unlimitedAccounts": {
+      "title": "Cuentas Ilimitadas",
+      "description": "XMAILBOX soporta buzones y alias ilimitados. Gestiona fácilmente múltiples cuentas de email de dominio.",
+      "detail": "XMAILBOX redefine la libertad y flexibilidad de la gestión de email. Hemos diseñado específicamente características de servicio ilimitadas: cantidades ilimitadas de buzones, enlaces de dominio y cantidades de email de alias para satisfacer completamente todas tus necesidades. Los administradores de empresas tienen una flexibilidad sin precedentes para agregar o eliminar cuentas de email en cualquier momento según las necesidades del negocio o cambios en el equipo, garantizando actualizaciones y optimizaciones oportunas de los canales de comunicación."
+    },
+    "unlimitedStorage": {
+      "title": "Almacenamiento Ilimitado",
+      "description": "XMAILBOX viene con 10G de espacio incorporado y soporta expansión de disco duro SSD. Los usuarios pueden insertar un disco duro SSD para expansión ilimitada.",
+      "detail": "XMAILBOX viene con 10G de espacio de almacenamiento incorporado para satisfacer las necesidades de la mayoría de los usuarios, mientras que también soporta expansión de disco duro SSD, rompiendo fácilmente los límites de almacenamiento de los servicios de email en la nube tradicionales. No hay que preocuparse por límites de tamaño de archivo o capacidad de buzón. Esto no solo significa velocidades de acceso a datos más rápidas y mayor eficiencia de almacenamiento, sino que también significa que tienes control completo sobre tus datos y recursos."
+    },
+    "flexible": {
+      "title": "Flexible y Eficiente",
+      "description": "Soporta WebMail, clientes PC y clientes móviles. Accede directamente a tu buzón ya sea en la oficina o fuera.",
+      "detail": "Dondequiera que estés, ya sea dentro de la empresa o viajando, XMAILBOX asegura que puedas acceder sin problemas a tu buzón. Porque soportamos completamente WebMail, clientes de email para PC y clientes de email móvil, soportamos varios protocolos estándar de email como SMTP, IMAPs, POP3s, etc. XMAILBOX hace que cada acceso al buzón sea excepcionalmente fácil."
+    },
+    "costEffective": {
+      "title": "Rentable",
+      "description": "Ahorra en altas tarifas anuales inmediatamente. No más pagos por dominios adicionales, cuentas de email extra o espacio de buzón excedente.",
+      "detail": "XMAILBOX te libera de la carga de tarifas anuales, eliminando completamente pagos adicionales por dominios extra, cuentas de email y espacio de buzón excedente. Elegir XMAILBOX significa que disfrutarás de beneficios económicos ultra altos, inversión única, beneficios de por vida. Únete a XMAILBOX ahora y comienza tu viaje de gestión de email eficiente y económica."
+    },
+    "secure": {
+      "title": "Seguro y Confiable",
+      "description": "Todos los datos de email se almacenan en XMAILBOX, que se mantiene en tu propia oficina, asegurando que los datos centrales no se filtren.",
+      "detail": "Todos los datos de email se almacenan de forma segura en el XMAILBOX de tu oficina, asegurando que tu información valiosa permanezca siempre bajo tu control. Tienes propiedad y control completos sobre tus datos, sin preocuparte por interferencias externas o riesgos de filtración de datos. Mientras tanto, XMAILBOX soporta completamente varios protocolos de seguridad de la industria como https, IMAPs, POP3s, y SMTP SASL, proporcionando protección de seguridad a nivel bancario para tu proceso de transmisión de email, evitando efectivamente ataques de hackers y robo de datos, garantizando la seguridad y privacidad de cada email."
+    },
+    "collaboration": {
+      "title": "Colaboración Sin Fisuras",
+      "description": "XMAILBOX también proporciona funcionalidad de compartir archivos, facilitando la transferencia y compartición de archivos entre PCs en la LAN, logrando así colaboración sin fisuras.",
+      "detail": "XMAILBOX rompe las barreras tradicionales al añadir funcionalidad innovadora de compartir archivos. Haciendo que la transferencia y compartición de archivos entre PCs en la LAN sea fácil, ya sean documentos, hojas de cálculo o presentaciones, pueden circular rápidamente y de forma segura entre los miembros del equipo. Con XMAILBOX, tu equipo puede experimentar colaboración verdaderamente sin fisuras, sincronizar instantáneamente el progreso del trabajo, acelerar los procesos de toma de decisiones y asegurar que cada proyecto avance eficientemente. Elige XMAILBOX, comienza una forma de trabajar inteligente y eficiente, y haz que cada colaboración esté llena de posibilidades infinitas."
+    }
+  },
+  "videoUnsupported": "Tu navegador no soporta la etiqueta de video."
+}

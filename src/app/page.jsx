@@ -4,12 +4,15 @@ import Link from "next/link"
 import { TypeAnimation } from "react-type-animation";
 // import { motion } from "framer-motion"
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 import AchievementsSection from "@/components/AchievementsSection";
 // import dynamic from "next/dynamic";
 
 import ModelViewer from "@/components/box_3d";
 
 const Homepage = () => {
+  const { t, i18n } = useTranslation('home');
+
   return (
     <>
     {/* <AnimatePresence> */}
@@ -49,10 +52,11 @@ const Homepage = () => {
             <h1 className="text-2xl md:text-4xl 2xl:text-6xl font-bold px-10 ">
               {/* 企业邮箱全新解决方案 */}
               <TypeAnimation
+                key={`title-${i18n.language}`}
                 sequence={[
-                  '企业邮箱全新解决方案', 10000,
+                  t('heroTitle'), 10000,
                   '', 1000,
-                  '企业邮箱全新解决方案', 10000,
+                  t('heroTitle'), 10000,
                   '', 1000
                 ]}
                 wrapper="span"
@@ -66,13 +70,14 @@ const Homepage = () => {
             <p className="md:text-l 2xl:text-xl px-10 ">
               {/* 轻松搭建企业邮箱，无限容量、无限账户、无限域名 */}
               <TypeAnimation
+                key={`subtitle-${i18n.language}`}
                 sequence={[
                   // Same substring at the start will only be typed out once, initially
-                  '轻松搭建企业邮箱，无限账户、无限扩容、灵活高效',
+                  t('heroSubtitle'),
                   10000, // wait 1s before replacing "Mice" with "Hamsters"
                   '',
                   1000,
-                  '轻松搭建企业邮箱，无限账户、无限扩容、灵活高效',
+                  t('heroSubtitle'),
                   10000,
                   '',
                   1000
@@ -94,7 +99,7 @@ const Homepage = () => {
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link href="/product">产品详情</Link>
+                <Link href="/product">{t('productDetails')}</Link>
               </button>
               {/* <button className="p-4 rounded-lg ring-1 ring-black"> */}
               <button className="p-4 rounded-lg ring-2 ring-green transition duration-300 ease-in-out hover:shadow-outline"
@@ -105,7 +110,7 @@ const Homepage = () => {
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link href="https://item.taobao.com/item.htm?ft=t&id=771448479530">立即购买</Link>
+                <Link href="https://item.taobao.com/item.htm?ft=t&id=771448479530">{t('buyNow')}</Link>
               </button>
             </div>
           </div>

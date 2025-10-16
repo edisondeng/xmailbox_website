@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import Image from "next/image"
 import Link from "next/link"
 import { AnimatePresence, motion } from "framer-motion";
-
+import { useTranslation } from 'react-i18next';
 
 import FeatureCard from "./featurecard.jsx"
 import Feature_detail from "./featuredetail.jsx"
@@ -20,23 +20,6 @@ const saveMoneyIcon = "/save.money.ok.png";
 const cooperateIcon = "/cooperate.ok.png";
 
 
-const features = [
-  [1, "无限账户", "邮箱盒子支持无限邮箱、无限别名。实现轻松管理多个域名的邮箱账号。", easyMgnIcon],
-  [2, "无限扩容", "邮箱盒子内置10G空间，同时支持SSD硬盘扩容，用户可以自行插入一个SSD硬盘无限扩容。", storageIcon],
-  [3, "灵活高效", "支持WebMail、PC端、手机端，不论在公司内还是在公司外都可以直接访问自己的邮箱。", flexibleIcon],
-  [4, "高性价比", "即刻省去高昂的年费，不再需要为额外的域名、额外的邮件账户数、超额邮箱空间支付费用。", saveMoneyIcon],
-  [5, "安全可靠", "所有邮件数据都保存在邮箱盒子里，邮箱盒子存放在您自己办公室里，确保核心数据不会外泄。", safeIcon],
-  [6, "无缝协作", "邮箱盒子同时提供文件共享功能，便于局域网PC之间传递与共享文件，从而实现无缝协作。", cooperateIcon],
-]
-
-const feature_detail_desc=[
-  "XMAILBOX 邮箱盒子重新定义邮箱管理的自由和灵活性。我们特别设计了无限制的服务特性：不设限的邮箱数量、域名绑定，以及别名邮箱数量，全面满足您的所有需求。企业管理员更是拥有前所未有的灵活性，可以根据业务需求或团队变动，随时增加或删除邮箱账户，确保通信渠道的及时更新与优化。",
-  "XMAILBOX 邮箱盒子自带10G存储空间可满足大多数用户需求，与此同时还支持SSD硬盘扩容，轻松突破传统云邮箱服务的存储界限，无需担心文件大小或邮箱容量的限制。这不仅意味着更快的数据访问速度和更高的存储效率，也意味着您完全掌控自己的数据和资源。",
-  "无论您身处何地，不论是在公司内部还是在旅途中，XMAILBOX 邮箱盒子都确保您能够无缝接入自己的邮箱。因为我们全面支持WebMail、PC邮件客户端、以及手机邮件客户端，我们支持SMTP、IMAPs、POP3s等各种标准邮件协议。XMAILBOX 让每一次邮箱访问都变得异常轻松。",
-  "XMAILBOX 邮箱盒子让您从年费的负担中解放出来，彻底摆脱了对额外域名、邮件账户以及超额邮箱空间的额外支付。选择XMAILBOX，意味着您将享受到超高的经济效益，一次性投资，终身受益。立即加入XMAILBOX，开启您高效、节约的邮箱管理新篇章。",
-  "所有邮件数据安全地存储在您的办公室里的 XMAILBOX 邮箱盒子中，确保您的宝贵信息永远在您的控制之下。您拥有对数据的完全所有权和控制权，无需担心外部干扰或数据泄露的风险。同时 XMAILBOX 全面支持业界的各种安全协议，如https, IMAPs, POP3s, 以及 SMTP SASL，为您的邮件传输过程提供银行级别的安全保护，有效防止黑客攻击和数据窃取，确保每一封邮件的安全和私密性。",
-  "XMAILBOX 邮箱盒子打破传统边界，加入了创新的文件共享功能。使得局域网内的PC间文件传输与共享变得轻而易举，无论是文档、表格还是演示文稿，都可以在团队成员之间迅速而安全地流转。借助XMAILBOX，您的团队可以体验到真正意义上的无缝协作，都能即刻同步工作进度，加速决策流程，确保每个项目都能够高效推进。选择XMAILBOX，开启智能高效的工作方式，让每一次合作都充满无限可能。"
-]
 
 
 function AnimatedFeature({clickedPos, children, onClose}){
@@ -75,12 +58,33 @@ function AnimatedFeature({clickedPos, children, onClose}){
 }
 
 function ProductPage() {
+  const { t, i18n } = useTranslation('product');
   // const ref = useRef(null);
   // const isInView = useInView(ref, { once: true });
   // const isInView = useInView(ref, { once: true });
   const [activeFeature, setActiveFeature] = useState(-1);
 
   const [clickedPos, setClickedPos] = useState(null);
+
+  // Dynamic features based on current language
+  const features = [
+    [1, t('features.unlimitedAccounts.title'), t('features.unlimitedAccounts.description'), easyMgnIcon, t('features.unlimitedAccounts.detail')],
+    [2, t('features.unlimitedStorage.title'), t('features.unlimitedStorage.description'), storageIcon, t('features.unlimitedStorage.detail')],
+    [3, t('features.flexible.title'), t('features.flexible.description'), flexibleIcon, t('features.flexible.detail')],
+    [4, t('features.costEffective.title'), t('features.costEffective.description'), saveMoneyIcon, t('features.costEffective.detail')],
+    [5, t('features.secure.title'), t('features.secure.description'), safeIcon, t('features.secure.detail')],
+    [6, t('features.collaboration.title'), t('features.collaboration.description'), cooperateIcon, t('features.collaboration.detail')],
+  ];
+
+  // Detailed descriptions for modal view
+  const feature_detail_desc = [
+    t('features.unlimitedAccounts.detail'),
+    t('features.unlimitedStorage.detail'),
+    t('features.flexible.detail'),
+    t('features.costEffective.detail'),
+    t('features.secure.detail'),
+    t('features.collaboration.detail'),
+  ];
 
   // const cardVariants = {
   //   initial: { y: 50, opacity: 0 },
@@ -103,7 +107,7 @@ function ProductPage() {
 
   return (
     <motion.div
-      key="product" 
+      key={`product-${i18n.language}`}
       className="h-full w-full flex flex-row lg:flex-row px-4 items-cetner justify-center wavy-background"
       // className="flex flex-col md:flex-row items-center justify-center w-full"
       initial={{ opacity: 0 }}
@@ -116,11 +120,11 @@ function ProductPage() {
     <div className="mt-4 xl:p-24 2xl=48 lg:mt-0 h-1/2 lg:h-full w-full flex flex-col gap-2 2xl:gap-8 items-center lg:justify-center">
       {/* {Title} */}
       <h1 className="text-2xl 2xl:text-4xl font-bold">
-        轻松搭建企业邮箱
+        {t('heroTitle')}
       </h1>
       {/* DESC */}
       <p className="md:text-xl">
-        中小企业最佳选择
+        {t('heroSubtitle')}
       </p>
 
       <ul className="grid md:grid-cols-3 w-full 2xl:w-3/4 gap-8 2xl:gap-16">
@@ -160,7 +164,7 @@ function ProductPage() {
       {/* BUTTONS */}
       <div className="w-full flex gap-12 p-3 items-center justify-center">
         <button className="p-4 rounded-lg ring-1 ring-green bg-black text-white transition duration-300 ease-in-out hover:shadow-outline">
-          <Link href={settings.taobao}>立即购买</Link>
+          <Link href={settings.taobao}>{t('buyNow')}</Link>
         </button>
       </div>
 
@@ -181,7 +185,7 @@ function ProductPage() {
               onNextClicked={()=>setActiveFeature((activeFeature+1)%6)}
               onPreviousClicked={()=>setActiveFeature((activeFeature-1)<0?5:(activeFeature-1))}
             >
-              <video 
+              <video
                 className="rounded-lg shadow-xl"
                 autoPlay
                 loop
@@ -189,8 +193,8 @@ function ProductPage() {
               >
                 {/* <source src="/unlimited_account1.mp4" type="video/mp4" /> */}
                 <source src="/add_email.mp4" type="video/mp4" />
-                
-                您的浏览器不支持Video标签。
+
+                {t('videoUnsupported')}
               </video>
             </Feature_detail>
           </AnimatedFeature>

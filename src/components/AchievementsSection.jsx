@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
+import { useTranslation } from 'react-i18next';
 // import AnimatedNumbers from 'react-animated-numbers';
 const AnimatedNumbers = dynamic(
   () => {
@@ -11,31 +12,6 @@ const AnimatedNumbers = dynamic(
 );
 
 
-const achievementsList = [
-  {
-    metric: "企业数",
-    value: "1000",
-    postfix: "+",
-  },
-  {
-    metric: "域名数",
-    value: "1100",
-    postfix: "+",
-  },
-  {
-    prefix: "~",
-    metric: "邮箱数",
-    value: "10000",
-  },
-  // {
-  //   metric: "Awards",
-  //   value: "7",
-  // },
-  // {
-  //   metric: "Years",
-  //   value: "5",
-  // },
-];
 
 
 function DelayedAnimationComponent({ achievement, locale, className, configs }) {
@@ -61,8 +37,28 @@ function DelayedAnimationComponent({ achievement, locale, className, configs }) 
 }
 
 const AchievementsSection = () => {
+  const { t, i18n } = useTranslation('home');
+
+  const achievementsList = [
+    {
+      metric: t('achievements.companies'),
+      value: "1000",
+      postfix: "+",
+    },
+    {
+      metric: t('achievements.domains'),
+      value: "1100",
+      postfix: "+",
+    },
+    {
+      prefix: "~",
+      metric: t('achievements.mailboxes'),
+      value: "10000",
+    },
+  ];
+
   return (
-    <div className="text-black py-2 px-4 md:px-0 xl:gap-8">
+    <div key={`achievements-${i18n.language}`} className="text-black py-2 px-4 md:px-0 xl:gap-8">
       <div className="rounded-md py-2 px-2 md:px-0 flex flex-row justify-around">
         {achievementsList.map((achievement, index) => {
           return (

@@ -2,25 +2,28 @@
 import Link from "next/link"
 import Image from "next/image"
 // import {useState} from "react";
+import { useTranslation } from 'react-i18next';
 
 import settings from "./constants.jsx";
 
 import NavLink from "./navLink";
-
-const links = [
-    {url:"/", title:"首页"},
-    {url:"/product", title:"产品详情"},
-    {url:"/help", title:"视频教程"},
-    // {url:"/contact", title:"联系我们"},
-    {url:settings.taobao, title:"立即购买"},
-    // {url:"/contact", title:"Contact"},
-]
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
+    const { t } = useTranslation('navbar');
     // const [open, setOpen] = useState(false);
 
+    const links = [
+        {url:"/", title:t('home')},
+        {url:"/product", title:t('product')},
+        {url:"/help", title:t('tutorials')},
+        // {url:"/contact", title:"联系我们"},
+        {url:settings.taobao, title:t('buyNow')},
+        // {url:"/contact", title:"Contact"},
+    ]
+
     return (
-        <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-sl sticky">
+        <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-sl sticky z-[9998] relative">
             <div className="hidden md:flex gap-4 w-1/3 justify-left">
                 {links.map((link)=>(
                     <NavLink link={link} key={link.title}/>
@@ -39,7 +42,8 @@ const Navbar = () => {
             </div>
 
 
-            <div className="hidden md:flex gap-4 w-1/3 justify-center">
+            <div className="hidden md:flex gap-4 w-1/3 justify-center items-center">
+                <LanguageSwitcher />
                 <Link href="/"><Image src="/github.png" alt="" width={24} height={24} /></Link>
                 <Link href="/"><Image src="/dribbble.png" alt="" width={24} height={24} /></Link>
                 <Link href="/"><Image src="/facebook.png" alt="" width={24} height={24} /></Link>

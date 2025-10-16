@@ -1,0 +1,28 @@
+{
+  "title": "开箱视频",
+  "description": "XMAILBOX邮箱盒子随货提供一根TYPE-C电源线、一根网线。",
+  "networkConfig": {
+    "title": "网络配置",
+    "description": "XMAILBOX邮箱盒子出厂默认IP地址为192.168.6.250"
+  },
+  "domainEmail": {
+    "title": "域名与信箱",
+    "description": "XMAILBOX邮箱盒子管理界面网址默认为 https://192.168.6.250/admin/"
+  },
+  "pcClient": {
+    "title": "配置PC邮件客户端",
+    "description": "XMAILBOX邮箱盒子支持 PC 邮件客户端，请参考视频教程设置您的 PC 邮件客户端。"
+  },
+  "mobileClient": {
+    "title": "配置手机邮件客户端",
+    "description": "XMAILBOX邮箱盒子支持手机邮件客户端，请参考视频教程设置您的手机邮件客户端。"
+  },
+  "fileSharing": {
+    "title": "WINDOWS文件共享",
+    "description": "XMAILBOX邮箱盒子具备文件共享功能，请参考视频。"
+  },
+  "reset": {
+    "title": "重置邮箱盒子",
+    "description": "如果你忘记了盒子的IP地址又或者忘记了您设置的管理员用户名与密码，请参考此视频重置。"
+  }
+}

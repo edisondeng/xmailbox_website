@@ -1,0 +1,41 @@
+{
+  "title": "Product Details",
+  "subtitle": "Best Choice for SMEs",
+  "description": "Easily set up business email, providing professional email solutions for enterprises",
+  "heroTitle": "Easily Set Up Business Email",
+  "heroSubtitle": "Best Choice for Small and Medium Enterprises",
+  "buyNow": "Buy Now",
+  "features": {
+    "unlimitedAccounts": {
+      "title": "Unlimited Accounts",
+      "description": "XMAILBOX supports unlimited mailboxes and aliases. Easily manage multiple domain email accounts.",
+      "detail": "XMAILBOX redefines the freedom and flexibility of email management. We've specifically designed unlimited service features: unlimited mailbox quantities, domain bindings, and alias email quantities to fully meet all your needs. Enterprise administrators have unprecedented flexibility to add or delete email accounts at any time based on business needs or team changes, ensuring timely updates and optimization of communication channels."
+    },
+    "unlimitedStorage": {
+      "title": "Unlimited Storage",
+      "description": "XMAILBOX comes with 10G built-in space and supports SSD hard drive expansion. Users can insert an SSD hard drive for unlimited expansion.",
+      "detail": "XMAILBOX comes with 10G of built-in storage space to meet most user needs, while also supporting SSD hard drive expansion, easily breaking through the storage limits of traditional cloud email services. No need to worry about file size or mailbox capacity limitations. This not only means faster data access speeds and higher storage efficiency, but also means you have complete control over your data and resources."
+    },
+    "flexible": {
+      "title": "Flexible & Efficient",
+      "description": "Supports WebMail, PC clients, and mobile clients. Access your mailbox directly whether you're in the office or outside.",
+      "detail": "Wherever you are, whether inside the company or traveling, XMAILBOX ensures you can seamlessly access your mailbox. Because we fully support WebMail, PC email clients, and mobile email clients, we support various standard email protocols like SMTP, IMAPs, POP3s, etc. XMAILBOX makes every mailbox access exceptionally easy."
+    },
+    "costEffective": {
+      "title": "Cost-Effective",
+      "description": "Save on high annual fees immediately. No more paying for additional domains, extra email accounts, or excess mailbox space.",
+      "detail": "XMAILBOX frees you from the burden of annual fees, completely eliminating additional payments for extra domains, email accounts, and excess mailbox space. Choosing XMAILBOX means you'll enjoy ultra-high economic benefits, one-time investment, lifetime benefits. Join XMAILBOX now and start your efficient, economical email management journey."
+    },
+    "secure": {
+      "title": "Secure & Reliable",
+      "description": "All email data is stored in the XMAILBOX, which is kept in your own office, ensuring core data does not leak.",
+      "detail": "All email data is securely stored in your office's XMAILBOX, ensuring your valuable information remains under your control at all times. You have complete ownership and control over your data, without worrying about external interference or data leakage risks. Meanwhile, XMAILBOX fully supports various industry security protocols like https, IMAPs, POP3s, and SMTP SASL, providing bank-level security protection for your email transmission process, effectively preventing hacker attacks and data theft, ensuring the security and privacy of every email."
+    },
+    "collaboration": {
+      "title": "Seamless Collaboration",
+      "description": "XMAILBOX also provides file sharing functionality, facilitating file transfer and sharing between PCs on the LAN, thus achieving seamless collaboration.",
+      "detail": "XMAILBOX breaks traditional boundaries by adding innovative file sharing functionality. Making file transfer and sharing between PCs on the LAN effortless, whether documents, spreadsheets, or presentations, can be quickly and securely circulated among team members. With XMAILBOX, your team can experience truly seamless collaboration, instantly sync work progress, accelerate decision-making processes, and ensure every project progresses efficiently. Choose XMAILBOX, start an intelligent and efficient way of working, and make every collaboration full of infinite possibilities."
+    }
+  },
+  "videoUnsupported": "Your browser does not support the video tag."
+}

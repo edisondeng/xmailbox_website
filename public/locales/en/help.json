@@ -1,0 +1,28 @@
+{
+  "title": "Unboxing Video",
+  "description": "XMAILBOX mailbox comes with a TYPE-C power cable and a network cable.",
+  "networkConfig": {
+    "title": "Network Configuration",
+    "description": "XMAILBOX mailbox factory default IP address is 192.168.6.250"
+  },
+  "domainEmail": {
+    "title": "Domain & Mailbox",
+    "description": "XMAILBOX mailbox management interface URL default is https://192.168.6.250/admin/"
+  },
+  "pcClient": {
+    "title": "Configure PC Mail Client",
+    "description": "XMAILBOX mailbox supports PC mail clients. Please refer to the video tutorial to set up your PC mail client."
+  },
+  "mobileClient": {
+    "title": "Configure Mobile Mail Client",
+    "description": "XMAILBOX mailbox supports mobile mail clients. Please refer to the video tutorial to set up your mobile mail client."
+  },
+  "fileSharing": {
+    "title": "WINDOWS File Sharing",
+    "description": "XMAILBOX mailbox has file sharing function. Please refer to the video."
+  },
+  "reset": {
+    "title": "Reset Mailbox",
+    "description": "If you forgot the box's IP address or forgot the administrator username and password you set, please refer to this video to reset."
+  }
+}
