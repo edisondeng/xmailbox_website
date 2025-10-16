@@ -7,7 +7,7 @@ import TransitionProvider from "@/components/transitionProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "XMAILBOX 邮箱盒子",
+  title: "XMAILBOX 邮箱盒子 - 极智未来科技",
   description: "企业邮箱最佳解决方案 XMAILBOX Business Email solution",
 };
 

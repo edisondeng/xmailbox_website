@@ -11,7 +11,8 @@ import ModelViewer from "@/components/box_3d";
 
 const Homepage = () => {
   return (
-    // <AnimatePresence>
+    <>
+    {/* <AnimatePresence> */}
       <motion.div
         key="home" 
         className="w-full h-full flex flex-col lg:flex-row"
@@ -110,8 +111,12 @@ const Homepage = () => {
           </div>
           <AchievementsSection />
         </div>
+        <div className="w-full absolute bottom-0 flex justify-center">
+          <a href="https://beian.miit.gov.cn">【粤ICP备16055860号】</a>
+        </div>
       </motion.div>
-    // </AnimatePresence>
+      {/* </AnimatePresence> */}
+    </>
   );
 };
 
