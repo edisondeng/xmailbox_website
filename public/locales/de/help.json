@@ -1,0 +1,28 @@
+{
+  "title": "Unboxing-Video",
+  "description": "XMAILBOX mailbox wird mit einem TYPE-C Stromkabel und einem Netzwerkkabel geliefert.",
+  "networkConfig": {
+    "title": "Netzwerkkonfiguration",
+    "description": "Die Standard-IP-Adresse der XMAILBOX mailbox aus der Fabrik ist 192.168.6.250"
+  },
+  "domainEmail": {
+    "title": "Domain und Postfach",
+    "description": "Die Standard-URL der XMAILBOX mailbox Verwaltungsoberfläche ist https://192.168.6.250/admin/"
+  },
+  "pcClient": {
+    "title": "PC-Mail-Client konfigurieren",
+    "description": "XMAILBOX mailbox unterstützt PC-Mail-Clients. Bitte beachten Sie das Video-Tutorial, um Ihren PC-Mail-Client zu konfigurieren."
+  },
+  "mobileClient": {
+    "title": "Mobilen Mail-Client konfigurieren",
+    "description": "XMAILBOX mailbox unterstützt mobile Mail-Clients. Bitte beachten Sie das Video-Tutorial, um Ihren mobilen Mail-Client zu konfigurieren."
+  },
+  "fileSharing": {
+    "title": "WINDOWS-Dateifreigabe",
+    "description": "XMAILBOX mailbox verfügt über eine Dateifreigabefunktion. Bitte beachten Sie das Video."
+  },
+  "reset": {
+    "title": "Postfach zurücksetzen",
+    "description": "Wenn Sie die IP-Adresse des Geräts oder den Benutzernamen und das Passwort des Administrators, die Sie festgelegt haben, vergessen haben, beachten Sie bitte dieses Video zum Zurücksetzen."
+  }
+}

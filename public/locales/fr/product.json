@@ -1,0 +1,41 @@
+{
+  "title": "Détails du produit",
+  "subtitle": "Meilleur choix pour les PME",
+  "description": "Configurez facilement l'e-mail d'entreprise, fournissant des solutions de messagerie professionnelles pour les entreprises",
+  "heroTitle": "Configurez facilement l'e-mail d'entreprise",
+  "heroSubtitle": "Meilleur choix pour les PME",
+  "buyNow": "Acheter maintenant",
+  "features": {
+    "unlimitedAccounts": {
+      "title": "Comptes illimités",
+      "description": "XMAILBOX supporte des boîtes mail et alias illimités. Gérez facilement plusieurs comptes e-mail de domaine.",
+      "detail": "XMAILBOX redéfinit la liberté et la flexibilité de la gestion des e-mails. Nous avons conçu des caractéristiques de service illimitées : quantités illimitées de boîtes mail, liens de domaine et quantités d'e-mails alias pour satisfaire complètement tous vos besoins."
+    },
+    "unlimitedStorage": {
+      "title": "Stockage illimité",
+      "description": "XMAILBOX vient avec 10G d'espace intégré et supporte l'extension de disque dur SSD. Les utilisateurs peuvent insérer un disque dur SSD pour une expansion illimitée.",
+      "detail": "XMAILBOX vient avec 10G d'espace de stockage intégré pour satisfaire les besoins de la plupart des utilisateurs, tout en supportant l'extension de disque dur SSD, cassant facilement les limites de stockage des services d'e-mail cloud traditionnels."
+    },
+    "flexible": {
+      "title": "Flexible et efficace",
+      "description": "Supporte WebMail, clients PC et clients mobiles. Accédez directement à votre boîte mail que ce soit au bureau ou à l'extérieur.",
+      "detail": "Où que vous soyez, que ce soit dans l'entreprise ou en voyage, XMAILBOX assure que vous pouvez accéder sans problème à votre boîte mail. Parce que nous supportons entièrement WebMail, clients e-mail PC et clients e-mail mobile."
+    },
+    "costEffective": {
+      "title": "Rentable",
+      "description": "Économisez immédiatement sur les frais annuels élevés. Plus de paiements pour des domaines supplémentaires, des comptes e-mail supplémentaires ou un espace de boîte mail excédentaire.",
+      "detail": "XMAILBOX vous libère du fardeau des frais annuels, éliminant complètement les paiements supplémentaires pour des domaines supplémentaires, des comptes e-mail et de l'espace de boîte mail excédentaire."
+    },
+    "secure": {
+      "title": "Sécurisé et fiable",
+      "description": "Toutes les données d'e-mail sont stockées dans XMAILBOX, qui est maintenu dans votre propre bureau, assurant que les données centrales ne fuient pas.",
+      "detail": "Toutes les données d'e-mail sont stockées en toute sécurité dans le XMAILBOX de votre bureau, assurant que vos informations précieuses restent toujours sous votre contrôle."
+    },
+    "collaboration": {
+      "title": "Collaboration transparente",
+      "description": "XMAILBOX fournit également une fonctionnalité de partage de fichiers, facilitant le transfert et le partage de fichiers entre PC sur le LAN, réalisant ainsi une collaboration transparente.",
+      "detail": "XMAILBOX brise les barrières traditionnelles en ajoutant une fonctionnalité de partage de fichiers innovante. Rendant le transfert et le partage de fichiers entre PC sur le LAN facile."
+    }
+  },
+  "videoUnsupported": "Votre navigateur ne supporte pas la balise vidéo."
+}

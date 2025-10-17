@@ -40,6 +40,27 @@ const resources = {
     product: require('../../public/locales/es/product.json'),
     help: require('../../public/locales/es/help.json'),
   },
+  fr: {
+    common: require('../../public/locales/fr/common.json'),
+    home: require('../../public/locales/fr/home.json'),
+    navbar: require('../../public/locales/fr/navbar.json'),
+    product: require('../../public/locales/fr/product.json'),
+    help: require('../../public/locales/fr/help.json'),
+  },
+  de: {
+    common: require('../../public/locales/de/common.json'),
+    home: require('../../public/locales/de/home.json'),
+    navbar: require('../../public/locales/de/navbar.json'),
+    product: require('../../public/locales/de/product.json'),
+    help: require('../../public/locales/de/help.json'),
+  },
+  pt: {
+    common: require('../../public/locales/pt/common.json'),
+    home: require('../../public/locales/pt/home.json'),
+    navbar: require('../../public/locales/pt/navbar.json'),
+    product: require('../../public/locales/pt/product.json'),
+    help: require('../../public/locales/pt/help.json'),
+  },
 };
 
 i18n

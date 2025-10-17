@@ -1,0 +1,41 @@
+{
+  "title": "Produktdetails",
+  "subtitle": "Beste Wahl für KMUs",
+  "description": "Richten Sie leicht Geschäftsmail ein, bieten Sie professionale Mail-Lösungen für Unternehmen",
+  "heroTitle": "Richten Sie leicht Geschäftsmail ein",
+  "heroSubtitle": "Beste Wahl für KMUs",
+  "buyNow": "Jetzt kaufen",
+  "features": {
+    "unlimitedAccounts": {
+      "title": "Unbegrenzte Konten",
+      "description": "XMAILBOX unterstützt unbegrenzte Mailboxen und Aliase. Verwalten Sie leicht mehrere Domain-Mail-Konten.",
+      "detail": "XMAILBOX definiert die Freiheit und Flexibilität der Mail-Verwaltung neu. Wir haben speziell unbegrenzte Service-Merkmale entworfen: unbegrenzte Mengen an Mailboxen, Domain-Bindungen und Alias-Mail-Mengen."
+    },
+    "unlimitedStorage": {
+      "title": "Unbegrenzter Speicher",
+      "description": "XMAILBOX kommt mit 10G integriertem Raum und unterstützt SSD-Festplattenerweiterung. Benutzer können eine SSD-Festplatte für unbegrenzte Erweiterung einsetzen.",
+      "detail": "XMAILBOX kommt mit 10G integriertem Speicherplatz, um die Bedürfnisse der meisten Benutzer zu erfüllen, während es auch SSD-Festplattenerweiterung unterstützt."
+    },
+    "flexible": {
+      "title": "Flexibel und effizient",
+      "description": "Unterstützt WebMail, PC-Clients und mobile Clients. Greifen Sie direkt auf Ihre Mailbox zu, egal ob im Büro oder außerhalb.",
+      "detail": "Wo immer Sie sind, ob im Unternehmen oder auf Reisen, XMAILBOX stellt sicher, dass Sie nahtlos auf Ihre Mailbox zugreifen können."
+    },
+    "costEffective": {
+      "title": "Kosteneffizient",
+      "description": "Sparen Sie sofort hohe jährliche Gebühren. Keine Zahlungen für zusätzliche Domains, zusätzliche Mail-Konten oder übermäßigen Mailbox-Speicherplatz.",
+      "detail": "XMAILBOX befreit Sie von der Last jährlicher Gebühren und beseitigt vollständig zusätzliche Zahlungen für zusätzliche Domains, Mail-Konten und übermäßigen Mailbox-Speicherplatz."
+    },
+    "secure": {
+      "title": "Sicher und zuverlässig",
+      "description": "Alle Mail-Daten werden in XMAILBOX gespeichert, das in Ihrem eigenen Büro gewartet wird, um sicherzustellen, dass Kerndaten nicht nach außen dringen.",
+      "detail": "Alle Mail-Daten werden sicher im XMAILBOX Ihres Büros gespeichert, um sicherzustellen, dass Ihre wertvollen Informationen immer unter Ihrer Kontrolle bleiben."
+    },
+    "collaboration": {
+      "title": "Nahtlose Zusammenarbeit",
+      "description": "XMAILBOX bietet auch Dateifreigabefunktionalität, erleichtert die Übertragung und das Teilen von Dateien zwischen PCs im LAN und realisiert so nahtlose Zusammenarbeit.",
+      "detail": "XMAILBOX durchbricht traditionelle Grenzen und fügt innovative Dateifreigabefunktionalität hinzu. Macht die Übertragung und das Teilen von Dateien zwischen PCs im LAN einfach."
+    }
+  },
+  "videoUnsupported": "Ihr Browser unterstützt das Video-Tag nicht."
+}

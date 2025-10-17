@@ -12,7 +12,10 @@ const languages = {
   en: 'English',
   ja: '日本語',
   ko: '한국어',
-  es: 'Español'
+  es: 'Español',
+  fr: 'Français',
+  de: 'Deutsch',
+  pt: 'Português'
 };
 
 // 语言提供者组件

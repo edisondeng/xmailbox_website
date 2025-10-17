@@ -1,0 +1,41 @@
+{
+  "title": "Detalhes do produto",
+  "subtitle": "Melhor escolha para PMEs",
+  "description": "Configure facilmente e-mail empresarial, fornecendo soluções de e-mail profissionais para empresas",
+  "heroTitle": "Configure facilmente e-mail empresarial",
+  "heroSubtitle": "Melhor escolha para PMEs",
+  "buyNow": "Comprar agora",
+  "features": {
+    "unlimitedAccounts": {
+      "title": "Contas ilimitadas",
+      "description": "XMAILBOX suporta caixas de correio e aliases ilimitados. Gerencie facilmente múltiplas contas de e-mail de domínio.",
+      "detail": "XMAILBOX redefine a liberdade e flexibilidade da gestão de e-mail. Projetamos especificamente características de serviço ilimitadas: quantidades ilimitadas de caixas de correio, ligações de domínio e quantidades de e-mail alias."
+    },
+    "unlimitedStorage": {
+      "title": "Armazenamento ilimitado",
+      "description": "XMAILBOX vem com 10G de espaço embutido e suporta expansão de disco rígido SSD. Usuários podem inserir um disco rígido SSD para expansão ilimitada.",
+      "detail": "XMAILBOX vem com 10G de espaço de armazenamento embutido para satisfazer as necessidades da maioria dos usuários, enquanto também suporta expansão de disco rígido SSD."
+    },
+    "flexible": {
+      "title": "Flexível e eficiente",
+      "description": "Suporta WebMail, clientes PC e clientes móveis. Acesse diretamente sua caixa de correio seja no escritório ou fora.",
+      "detail": "Onde quer que você esteja, seja dentro da empresa ou viajando, XMAILBOX garante que você possa acessar sem problemas sua caixa de correio."
+    },
+    "costEffective": {
+      "title": "Econômico",
+      "description": "Economize imediatamente em altas taxas anuais. Não mais pagamentos por domínios adicionais, contas de e-mail extras ou espaço de caixa de correio excedente.",
+      "detail": "XMAILBOX liberta você do fardo de taxas anuais, eliminando completamente pagamentos adicionais por domínios extras, contas de e-mail e espaço de caixa de correio excedente."
+    },
+    "secure": {
+      "title": "Seguro e confiável",
+      "description": "Todos os dados de e-mail são armazenados em XMAILBOX, que é mantido em seu próprio escritório, garantindo que dados centrais não vazem.",
+      "detail": "Todos os dados de e-mail são armazenados com segurança no XMAILBOX do seu escritório, garantindo que suas informações valiosas permaneçam sempre sob seu controle."
+    },
+    "collaboration": {
+      "title": "Colaboração perfeita",
+      "description": "XMAILBOX também fornece funcionalidade de compartilhamento de arquivos, facilitando a transferência e compartilhamento de arquivos entre PCs na LAN, realizando assim colaboração perfeita.",
+      "detail": "XMAILBOX quebra barreiras tradicionais ao adicionar funcionalidade inovadora de compartilhamento de arquivos. Tornando a transferência e compartilhamento de arquivos entre PCs na LAN fácil."
+    }
+  },
+  "videoUnsupported": "Seu navegador não suporta a tag de vídeo."
+}

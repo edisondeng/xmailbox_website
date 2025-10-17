@@ -1,0 +1,34 @@
+{
+  "title": "Neue Unternehmens-E-Mail-Lösung",
+  "subtitle": "Richten Sie leicht Unternehmens-E-Mail ein, unbegrenzte Konten, unbegrenzte Erweiterung, flexibel und effizient",
+  "heroTitle": "Neue Unternehmens-E-Mail-Lösung",
+  "heroSubtitle": "Richten Sie leicht Unternehmens-E-Mail ein, unbegrenzte Konten, unbegrenzte Erweiterung, flexibel und effizient",
+  "productDetails": "Produktdetails",
+  "buyNow": "Jetzt kaufen",
+  "features": {
+    "unlimitedAccounts": {
+      "title": "Unbegrenzte Konten",
+      "description": "Erstellen Sie eine unbegrenzte Anzahl von E-Mail-Konten für Unternehmen, die verschiedenen Geschäftsanforderungen gerecht werden"
+    },
+    "unlimitedStorage": {
+      "title": "Unbegrenzte Erweiterung",
+      "description": "Speicherplatz kann jederzeit erweitert werden, um den Datenwachstumsanforderungen von Unternehmen gerecht zu werden"
+    },
+    "flexible": {
+      "title": "Flexibel und effizient",
+      "description": "Flexible Konfigurationsschemata, effiziente E-Mail-Verarbeitungsfähigkeit"
+    }
+  },
+  "whyChoose": {
+    "title": "Warum uns wählen",
+    "description": "Professionelle Unternehmens-E-Mail-Lösung, unterstützt die digitale Transformation von Unternehmen",
+    "professional": "Professionelles Team",
+    "secure": "Sicherheit und Zuverlässigkeit",
+    "support": "24/7-Support"
+  },
+  "achievements": {
+    "companies": "Unternehmen",
+    "domains": "Domänen",
+    "mailboxes": "Postfächer"
+  }
+}

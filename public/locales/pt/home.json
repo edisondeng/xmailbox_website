@@ -1,0 +1,34 @@
+{
+  "title": "Nova solução de e-mail empresarial",
+  "subtitle": "Configure facilmente e-mail empresarial, contas ilimitadas, expansão ilimitada, flexível e eficiente",
+  "heroTitle": "Nova solução de e-mail empresarial",
+  "heroSubtitle": "Configure facilmente e-mail empresarial, contas ilimitadas, expansão ilimitada, flexível e eficiente",
+  "productDetails": "Detalhes do produto",
+  "buyNow": "Comprar agora",
+  "features": {
+    "unlimitedAccounts": {
+      "title": "Contas ilimitadas",
+      "description": "Crie uma quantidade ilimitada de contas de e-mail para empresas, atendendo várias necessidades de negócios"
+    },
+    "unlimitedStorage": {
+      "title": "Expansão ilimitada",
+      "description": "O espaço de armazenamento pode ser expandido a qualquer momento para atender às necessidades de crescimento de dados empresariais"
+    },
+    "flexible": {
+      "title": "Flexível e eficiente",
+      "description": "Esquemas de configuração flexíveis, capacidade eficiente de processamento de e-mails"
+    }
+  },
+  "whyChoose": {
+    "title": "Por que nos escolher",
+    "description": "Solução profissional de e-mail empresarial, auxiliando na transformação digital de empresas",
+    "professional": "Equipe profissional",
+    "secure": "Segurança e confiabilidade",
+    "support": "Suporte 24/7"
+  },
+  "achievements": {
+    "companies": "Empresas",
+    "domains": "Domínios",
+    "mailboxes": "Caixas de e-mail"
+  }
+}

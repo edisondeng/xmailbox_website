@@ -1,0 +1,28 @@
+{
+  "title": "Vídeo de unboxing",
+  "description": "XMAILBOX mailbox vem com um cabo de alimentação TYPE-C e um cabo de rede.",
+  "networkConfig": {
+    "title": "Configuração de rede",
+    "description": "O endereço IP padrão de fábrica do XMAILBOX mailbox é 192.168.6.250"
+  },
+  "domainEmail": {
+    "title": "Domínio e caixa postal",
+    "description": "A URL padrão da interface de administração do XMAILBOX mailbox é https://192.168.6.250/admin/"
+  },
+  "pcClient": {
+    "title": "Configurar cliente de e-mail PC",
+    "description": "XMAILBOX mailbox suporta clientes de e-mail PC. Por favor, consulte o tutorial de vídeo para configurar seu cliente de e-mail PC."
+  },
+  "mobileClient": {
+    "title": "Configurar cliente de e-mail móvel",
+    "description": "XMAILBOX mailbox suporta clientes de e-mail móveis. Por favor, consulte o tutorial de vídeo para configurar seu cliente de e-mail móvel."
+  },
+  "fileSharing": {
+    "title": "Compartilhamento de arquivos WINDOWS",
+    "description": "XMAILBOX mailbox possui função de compartilhamento de arquivos. Por favor, consulte o vídeo."
+  },
+  "reset": {
+    "title": "Redefinir caixa postal",
+    "description": "Se você esqueceu o IP da caixa ou o nome de usuário e senha do administrador que definiu, por favor, consulte este vídeo para redefinir."
+  }
+}
