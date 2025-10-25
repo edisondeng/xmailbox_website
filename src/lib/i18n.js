@@ -2,6 +2,7 @@
 
 import { initReactI18next } from 'react-i18next';
 import i18n from 'i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
 // Import translation files using dynamic imports for App Router
 const resources = {
@@ -64,13 +65,59 @@ const resources = {
 };
 
 i18n
+  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'zh', // default language
     fallbackLng: 'zh',
+    debug: false, // 生产环境关闭调试模式
     interpolation: {
       escapeValue: false,
+    },
+    detection: {
+      // 启用浏览器语言检测
+      order: ['localStorage', 'navigator', 'htmlTag'],
+      caches: ['localStorage'],
+      // 映射浏览器语言到我们的语言代码
+      convertDetectedLanguage: (lng) => {
+        // 将浏览器的语言代码映射到我们支持的语言代码
+        const languageMap = {
+          'zh-CN': 'zh',
+          'zh-TW': 'zh',
+          'zh-HK': 'zh',
+          'en-US': 'en',
+          'en-GB': 'en',
+          'en-AU': 'en',
+          'en-CA': 'en',
+          'ja-JP': 'ja',
+          'ko-KR': 'ko',
+          'es-ES': 'es',
+          'es-MX': 'es',
+          'fr-FR': 'fr',
+          'fr-CA': 'fr',
+          'de-DE': 'de',
+          'de-AT': 'de',
+          'pt-BR': 'pt',
+          'pt-PT': 'pt'
+        };
+
+        // 首先检查完整映射
+        if (languageMap[lng]) {
+          return languageMap[lng];
+        }
+
+        // 提取语言代码的第一部分（如 en-US -> en）
+        const shortLng = lng.split('-')[0];
+
+        // 检查是否是我们支持的语言
+        const supportedLanguages = ['zh', 'en', 'ja', 'ko', 'es', 'fr', 'de', 'pt'];
+        if (supportedLanguages.includes(shortLng)) {
+          return shortLng;
+        }
+
+        // 如果不支持，返回原语言代码（会触发fallback）
+        return lng;
+      }
     },
   });
 

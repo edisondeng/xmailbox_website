@@ -21,14 +21,20 @@ const languages = {
 // 语言提供者组件
 export const LanguageProvider = ({ children }) => {
   const { i18n } = useTranslation();
-  const [language, setLanguage] = useState(i18n.language || 'zh'); // 默认语言为中文
+  const [language, setLanguage] = useState(i18n.language || 'zh');
 
   useEffect(() => {
-    // 从localStorage获取保存的语言偏好
-    const savedLanguage = localStorage.getItem('language');
-    if (savedLanguage && savedLanguage !== i18n.language) {
-      i18n.changeLanguage(savedLanguage);
-      setLanguage(savedLanguage);
+    // 等待 i18n 初始化完成
+    if (i18n.isInitialized) {
+      // 从localStorage获取保存的语言偏好
+      const savedLanguage = localStorage.getItem('language');
+      if (savedLanguage && savedLanguage !== i18n.language) {
+        i18n.changeLanguage(savedLanguage);
+        setLanguage(savedLanguage);
+      } else {
+        // 使用i18n自动检测的语言（包括浏览器语言检测）
+        setLanguage(i18n.language);
+      }
     }
   }, [i18n]);
 
