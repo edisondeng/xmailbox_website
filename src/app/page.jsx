@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
 import AchievementsSection from "@/components/AchievementsSection";
 // import dynamic from "next/dynamic";
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 
 import ModelViewer from "@/components/box_3d";
 
@@ -116,9 +117,42 @@ const Homepage = () => {
           </div>
           <AchievementsSection />
         </div>
-        <div className="w-full absolute bottom-0 flex justify-center">
-          <a href="https://beian.miit.gov.cn">【粤ICP备16055860号】</a>
-        </div>
+        <footer className="w-full absolute bottom-0">
+          <div className="max-w-4xl mx-auto px-6 py-4">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-sm">
+
+              {/* 左侧：Logo + 公司全称 */}
+              <div className="flex items-center gap-3">
+                <div className="flex flex-col">
+                  <a
+                    href="https://www.xtell.cn/"
+                    className="flex items-center gap-1 hover:text-green-500 transition-colors duration-200 font-medium"
+                  >
+                    <img src="/xtell_logo_en.svg" alt="XTell Logo" className="h-8 w-auto" />
+                  </a>
+                  <a
+                    href="https://www.xtell.cn/"
+                    className="flex items-center gap-1 hover:text-green-500 transition-colors duration-200 font-medium"
+                  >
+                    <div className="text-gray-600">
+                      © 2025 {true ? t('company') : ''}
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              {/* 右侧*/}
+              <div className="flex flex-col items-center gap-4">
+                <div className="text-ls text-gray-600">
+                  {true ? t('supportEmail') : ''}
+                </div>
+                <a href="https://beian.miit.gov.cn" className="text-xs text-gray-600">
+                  【粤ICP备16055860号】
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
       </motion.div>
       {/* </AnimatePresence> */}
     </>

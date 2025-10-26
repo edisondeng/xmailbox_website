@@ -30,5 +30,7 @@
     "companies": "企业数",
     "domains": "域名数",
     "mailboxes": "邮箱数"
-  }
+  },
+  "company": "深圳市极智未来科技有限公司",
+  "supportEmail": "技术支持：support@xtell.cn"
 }

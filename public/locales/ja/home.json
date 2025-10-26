@@ -23,5 +23,7 @@
     "companies": "企業数",
     "domains": "ドメイン数",
     "mailboxes": "メールボックス数"
-  }
+  },
+  "company": "SHENZHEN XTELL FUTURE TECHNOLOGY CO.,LTD.",
+  "supportEmail": "Support: support@xtell.cn"
 }
