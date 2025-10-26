@@ -6,6 +6,7 @@ import React, { useState } from "react";
 // import { TypeAnimation } from "react-type-animation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
+import { useMounted } from "@/lib/useMounted";
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -52,6 +53,7 @@ function AnimatedFeature({clickedPos, children, onClose}){
 
 function ProductPage() {
   const { t, i18n } = useTranslation('help');
+  const mounted = useMounted();
   // const ref = useRef(null);
   // const isInView = useInView(ref, { once: true });
   // const isInView = useInView(ref, { once: true });

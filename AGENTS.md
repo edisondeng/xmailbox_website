@@ -16,3 +16,8 @@ Use `@/openspec/AGENTS.md` to learn:
 Keep this managed block so 'openspec update' can refresh the instructions.
 
 <!-- OPENSPEC:END -->
+
+<!-- XTELL:START -->
+你要在服务器安装任何程序， 你只能给用户指令，由用户负责安装。
+只用中文回复。
+<!-- XTELL:END -->

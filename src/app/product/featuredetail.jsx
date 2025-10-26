@@ -4,11 +4,13 @@ import Image from "next/image"
 // import Link from "next/link"
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import { useMounted } from "@/lib/useMounted";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight,faTimes } from '@fortawesome/free-solid-svg-icons';
 
 function Feature_detail({onClose, num, title, description, icon, next, previous, onNextClicked, onPreviousClicked, children}){
+  const mounted = useMounted();
   return (
     <div className="">
       {/* <Image src="/easymgn.1.png" width="1200" height="500" alt=""/> */}
@@ -45,7 +47,7 @@ function Feature_detail({onClose, num, title, description, icon, next, previous,
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-2">
-                {title}
+                {mounted ? title : ''}
               </h3>
               <Image width={50} height={50} src={icon} alt="" />
             </div>

@@ -22,26 +22,27 @@ const languages = {
 export const LanguageProvider = ({ children }) => {
   const { i18n } = useTranslation();
   const [language, setLanguage] = useState(i18n.language || 'zh');
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // 等待 i18n 初始化完成
-    if (i18n.isInitialized) {
-      // 从localStorage获取保存的语言偏好
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (mounted) {
       const savedLanguage = localStorage.getItem('language');
       if (savedLanguage && savedLanguage !== i18n.language) {
         i18n.changeLanguage(savedLanguage);
         setLanguage(savedLanguage);
       } else {
-        // 使用i18n自动检测的语言（包括浏览器语言检测）
         setLanguage(i18n.language);
       }
     }
-  }, [i18n]);
+  }, [mounted, i18n]);
 
   const switchLanguage = (lang) => {
     i18n.changeLanguage(lang);
     setLanguage(lang);
-    // 保存语言偏好到localStorage
     localStorage.setItem('language', lang);
   };
 

@@ -2,12 +2,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from 'react-i18next';
+import { useMounted } from "@/lib/useMounted";
 
 const LanguageSwitcher = () => {
   const { language, switchLanguage, languages } = useLanguage();
   const { t } = useTranslation('common');
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const mounted = useMounted();
 
   // 点击外部关闭下拉菜单
   useEffect(() => {
@@ -22,6 +24,10 @@ const LanguageSwitcher = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div className="relative" ref={dropdownRef}>

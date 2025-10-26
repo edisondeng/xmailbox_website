@@ -2,15 +2,17 @@
 
 import Link from "next/link"
 import {usePathname} from "next/navigation"
+import { useMounted } from "@/lib/useMounted";
 
 const NavLink = ({link}) =>{
     const pathName = usePathname();
+    const mounted = useMounted();
     // console.log(pathName);
     return (
         <Link className={`rounded p-1 ${pathName===link.url && "bg-black text-white"}`}
             href={link.url}
         >
-            {link.title}
+            {mounted ? link.title : ''}
         </Link>
     )
 }

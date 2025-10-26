@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { useTranslation } from 'react-i18next';
+import { useMounted } from "@/lib/useMounted";
 // import AnimatedNumbers from 'react-animated-numbers';
 const AnimatedNumbers = dynamic(
   () => {
@@ -38,6 +39,7 @@ function DelayedAnimationComponent({ achievement, locale, className, configs }) 
 
 const AchievementsSection = () => {
   const { t, i18n } = useTranslation('home');
+  const mounted = useMounted();
 
   const achievementsList = [
     {
@@ -85,7 +87,7 @@ const AchievementsSection = () => {
                 />
                 {achievement.postfix}
               </h2>
-              <p className="text-[#000000] text-base">{achievement.metric}</p>
+              <p className="text-[#000000] text-base">{mounted ? achievement.metric : ''}</p>
             </div>
           );
         })}

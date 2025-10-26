@@ -5,6 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 // import { motion } from "framer-motion"
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
+import { useMounted } from "@/lib/useMounted";
 import AchievementsSection from "@/components/AchievementsSection";
 // import dynamic from "next/dynamic";
 
@@ -12,6 +13,7 @@ import ModelViewer from "@/components/box_3d";
 
 const Homepage = () => {
   const { t, i18n } = useTranslation('home');
+  const mounted = useMounted();
 
   return (
     <>
@@ -54,9 +56,9 @@ const Homepage = () => {
               <TypeAnimation
                 key={`title-${i18n.language}`}
                 sequence={[
-                  t('heroTitle'), 10000,
+                  mounted ? t('heroTitle') : '', 10000,
                   '', 1000,
-                  t('heroTitle'), 10000,
+                  mounted ? t('heroTitle') : '', 10000,
                   '', 1000
                 ]}
                 wrapper="span"
@@ -73,11 +75,11 @@ const Homepage = () => {
                 key={`subtitle-${i18n.language}`}
                 sequence={[
                   // Same substring at the start will only be typed out once, initially
-                  t('heroSubtitle'),
+                  mounted ? t('heroSubtitle') : '',
                   10000, // wait 1s before replacing "Mice" with "Hamsters"
                   '',
                   1000,
-                  t('heroSubtitle'),
+                  mounted ? t('heroSubtitle') : '',
                   10000,
                   '',
                   1000
@@ -91,7 +93,7 @@ const Homepage = () => {
             </p>
             {/* BUTTONS */}
             <div className="w-full flex gap-12  px-10">
-              <button className="p-4 rounded-lg ring-1 ring-green bg-black text-white transition duration-300 ease-in-out hover:shadow-outline"
+              <motion.button className="p-4 rounded-lg ring-1 ring-green bg-black text-white transition duration-300 ease-in-out hover:shadow-outline"
                 whileHover={{
                   cursor: 'pointer', // This does not apply here as Framer Motion does not handle 'cursor' in animation props
                   scale: 1.1,
@@ -99,10 +101,10 @@ const Homepage = () => {
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link href="/product">{t('productDetails')}</Link>
-              </button>
+                <Link href="/product">{mounted ? t('productDetails') : ''}</Link>
+              </motion.button>
               {/* <button className="p-4 rounded-lg ring-1 ring-black"> */}
-              <button className="p-4 rounded-lg ring-2 ring-green transition duration-300 ease-in-out hover:shadow-outline"
+              <motion.button className="p-4 rounded-lg ring-2 ring-green transition duration-300 ease-in-out hover:shadow-outline"
                 whileHover={{
                   cursor: 'pointer', // This does not apply here as Framer Motion does not handle 'cursor' in animation props
                   scale: 1.1,
@@ -110,13 +112,14 @@ const Homepage = () => {
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link href="https://item.taobao.com/item.htm?ft=t&id=771448479530">{t('buyNow')}</Link>
-              </button>
+                <Link href="https://item.taobao.com/item.htm?ft=t&id=771448479530">{mounted ? t('buyNow') : ''}</Link>
+              </motion.button>
             </div>
           </div>
           <AchievementsSection />
         </div>
         <div className="w-full absolute bottom-0 flex justify-center">
+          <a href="https://www.xtell.cn/">深圳市极智未来科技有限公司</a>
           <a href="https://beian.miit.gov.cn">【粤ICP备16055860号】</a>
         </div>
       </motion.div>
