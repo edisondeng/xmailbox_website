@@ -14,5 +14,8 @@ Use `@/openspec/AGENTS.md` to learn:
 - Project structure and guidelines
 
 Keep this managed block so 'openspec update' can refresh the instructions.
-
 <!-- OPENSPEC:END -->
+
+<!-- XTELL:START -->
+永远不要尝试主动启动服务器程序，如果需要启动服务器程序请给出指令通知用户执行。
+<!-- XTELL:END -->
