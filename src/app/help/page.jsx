@@ -6,7 +6,6 @@ import React, { useState } from "react";
 // import { TypeAnimation } from "react-type-animation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
-import { useMounted } from "@/lib/useMounted";
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -53,7 +52,6 @@ function AnimatedFeature({clickedPos, children, onClose}){
 
 function ProductPage() {
   const { t, i18n } = useTranslation('help');
-  const mounted = useMounted();
   // const ref = useRef(null);
   // const isInView = useInView(ref, { once: true });
   // const isInView = useInView(ref, { once: true });
@@ -160,7 +158,6 @@ function ProductPage() {
               scale: { duration: 0.2 }
             }}
             whileHover={{
-              cursor: 'pointer', // This does not apply here as Framer Motion does not handle 'cursor' in animation props
               scale: 1.05,
               transition: { duration: 0.5 },
             }}

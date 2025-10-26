@@ -6,7 +6,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
-import { useMounted } from "@/lib/useMounted";
 
 import FeatureCard from "./featurecard.jsx"
 import Feature_detail from "./featuredetail.jsx"
@@ -60,7 +59,6 @@ function AnimatedFeature({clickedPos, children, onClose}){
 
 function ProductPage() {
   const { t, i18n } = useTranslation('product');
-  const mounted = useMounted();
   // const ref = useRef(null);
   // const isInView = useInView(ref, { once: true });
   // const isInView = useInView(ref, { once: true });
@@ -122,11 +120,11 @@ function ProductPage() {
     <div className="mt-4 xl:p-24 2xl=48 lg:mt-0 h-1/2 lg:h-full w-full flex flex-col gap-2 2xl:gap-8 items-center lg:justify-center">
       {/* {Title} */}
       <h1 className="text-2xl 2xl:text-4xl font-bold">
-        {mounted ? t('heroTitle') : ''}
+        {t('heroTitle')}
       </h1>
       {/* DESC */}
       <p className="md:text-xl">
-        {mounted ? t('heroSubtitle') : ''}
+        {t('heroSubtitle')}
       </p>
 
       <ul className="grid md:grid-cols-3 w-full 2xl:w-3/4 gap-8 2xl:gap-16">
@@ -144,7 +142,6 @@ function ProductPage() {
               scale: { duration: 0.2 }
             }}
             whileHover={{
-              cursor: 'pointer', // This does not apply here as Framer Motion does not handle 'cursor' in animation props
               scale: 1.05,
               transition: { duration: 0.5 },
             }}

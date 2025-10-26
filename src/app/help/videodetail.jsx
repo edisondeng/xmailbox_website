@@ -5,7 +5,6 @@ import React from "react";
 // import { TypeAnimation } from "react-type-animation";
 // import { AnimatePresence, easeInOut, motion, useInView } from "framer-motion";
 import { motion } from "framer-motion";
-import { useMounted } from "@/lib/useMounted";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -13,7 +12,6 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 // import Typography from '@mui/material/Typography';
 
 function Video_detail({onClose, num, title, video, description}){
-  const mounted = useMounted();
   return (
     <div className="">
       <motion.div className="flex items-center justify-center w-screen h-screen"
@@ -49,9 +47,9 @@ function Video_detail({onClose, num, title, video, description}){
               </div>
               <div>
               <h3 className="text-2xl font-bold mb-2">
-                {mounted ? title : ''}
+                {title}
               </h3>
-                {mounted ? description : ''}
+                {description}
               </div>
             </div>
             <FontAwesomeIcon icon={faTimes} className="text-2xl -mt-9 hover:ring-blue-300 rounded-full cursor-pointer" 

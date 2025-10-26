@@ -11,12 +11,9 @@ import Image from "next/image"
 
 // import Typography from '@mui/material/Typography';
 
-import { useMounted } from "@/lib/useMounted";
-
 function VideoCard({ num, title, imgUrl }) {
-    const mounted = useMounted();
     return (
-        <div
+        <div 
         // className="border border-gray-200 bg-blue-100 rounded-lg shadow-md p-3 m-2"
         // className="border border-gray-200 bg-blue-50 rounded-lg shadow-md p-3 m-3 sd:w-4/5 lg:w-3/4 lg:h-[250px] opacity-80 hover:opacity-100 hover:bg-white"
             className="border border-gray-200 bg-blue-50 rounded-lg shadow-md p-3 m-3 2xl:w-[400px] 2xl:h-[300px] opacity-80 hover:opacity-100 hover:bg-white"
@@ -27,7 +24,7 @@ function VideoCard({ num, title, imgUrl }) {
                     {num}
                 </div>
                 <h3 className="text-lg font-bold mb-2">
-                    {mounted ? title : ''}
+                    {title}
                 </h3>
             </div>
             <div className="relative xl:w-[250px] xl:h-[120px] 2xl:w-[380px] 2xl:h-[220px]">

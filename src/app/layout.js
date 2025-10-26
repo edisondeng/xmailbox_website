@@ -5,7 +5,6 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import "./globals.css";
 import TransitionProvider from "@/components/transitionProvider";
-import DynamicTitle from "@/components/DynamicTitle";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,7 +19,6 @@ export default function RootLayout({ children }) {
     <html lang="zh_CN">
       <body className={inter.className}>
         <LanguageProvider>
-          <DynamicTitle />
           <TransitionProvider>{children}</TransitionProvider>
         </LanguageProvider>
 

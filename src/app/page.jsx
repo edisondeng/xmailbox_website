@@ -2,19 +2,15 @@
 import Image from "next/image"
 import Link from "next/link"
 import { TypeAnimation } from "react-type-animation";
-// import { motion } from "framer-motion"
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
-import { useMounted } from "@/lib/useMounted";
 import AchievementsSection from "@/components/AchievementsSection";
 // import dynamic from "next/dynamic";
-import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 
 import ModelViewer from "@/components/box_3d";
 
 const Homepage = () => {
   const { t, i18n } = useTranslation('home');
-  const mounted = useMounted();
 
   return (
     <>
@@ -38,7 +34,7 @@ const Homepage = () => {
             /> */}
             <div className="absolute top-0 left-0 m-4">
               {/* 使用img元素显示自定义图标 */}
-              <img src="/mouse.png" alt="3D Control" width="40" height="40" />
+              <Image src="/mouse.png" alt="3D Control" width={40} height={40} />
             </div>
             <ModelViewer
               // scale = initialScale,
@@ -57,9 +53,9 @@ const Homepage = () => {
               <TypeAnimation
                 key={`title-${i18n.language}`}
                 sequence={[
-                  mounted ? t('heroTitle') : '', 10000,
+                  t('heroTitle'), 10000,
                   '', 1000,
-                  mounted ? t('heroTitle') : '', 10000,
+                  t('heroTitle'), 10000,
                   '', 1000
                 ]}
                 wrapper="span"
@@ -76,11 +72,11 @@ const Homepage = () => {
                 key={`subtitle-${i18n.language}`}
                 sequence={[
                   // Same substring at the start will only be typed out once, initially
-                  mounted ? t('heroSubtitle') : '',
+                  t('heroSubtitle'),
                   10000, // wait 1s before replacing "Mice" with "Hamsters"
                   '',
                   1000,
-                  mounted ? t('heroSubtitle') : '',
+                  t('heroSubtitle'),
                   10000,
                   '',
                   1000
@@ -96,24 +92,22 @@ const Homepage = () => {
             <div className="w-full flex gap-12  px-10">
               <motion.button className="p-4 rounded-lg ring-1 ring-green bg-black text-white transition duration-300 ease-in-out hover:shadow-outline"
                 whileHover={{
-                  cursor: 'pointer', // This does not apply here as Framer Motion does not handle 'cursor' in animation props
                   scale: 1.1,
                   transition: { duration: 0.1 },
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link href="/product">{mounted ? t('productDetails') : ''}</Link>
+                <Link href="/product">{t('productDetails')}</Link>
               </motion.button>
               {/* <button className="p-4 rounded-lg ring-1 ring-black"> */}
               <motion.button className="p-4 rounded-lg ring-2 ring-green transition duration-300 ease-in-out hover:shadow-outline"
                 whileHover={{
-                  cursor: 'pointer', // This does not apply here as Framer Motion does not handle 'cursor' in animation props
                   scale: 1.1,
                   transition: { duration: 0.1 },
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link href="https://item.taobao.com/item.htm?ft=t&id=771448479530">{mounted ? t('buyNow') : ''}</Link>
+                <Link href="https://item.taobao.com/item.htm?ft=t&id=771448479530">{t('buyNow')}</Link>
               </motion.button>
             </div>
           </div>
@@ -130,14 +124,14 @@ const Homepage = () => {
                     href="https://www.xtell.cn/"
                     className="flex items-center gap-1 hover:text-green-500 transition-colors duration-200 font-medium"
                   >
-                    <img src="/xtell_logo_en.svg" alt="XTell Logo" className="h-8 w-auto" />
+                    <Image src="/xtell_logo_en.svg" alt="XTell Logo" width={32} height={32} className="h-8 w-auto" />
                   </a>
                   <a
                     href="https://www.xtell.cn/"
                     className="flex items-center gap-1 hover:text-green-500 transition-colors duration-200 font-medium"
                   >
                     <div className="text-gray-600">
-                      © 2025 {mounted ? t('company') : ''}
+                      © 2025 {t('company')}
                     </div>
                   </a>
                 </div>
@@ -146,7 +140,7 @@ const Homepage = () => {
               {/* 右侧*/}
               <div className="flex flex-col items-center gap-4">
                 <div className="text-ls text-gray-600">
-                  {mounted ? t('supportEmail') : ''}
+                  {t('supportEmail')}
                 </div>
                 <a href="https://beian.miit.gov.cn" className="text-xs text-gray-600">
                   【粤ICP备16055860号】
