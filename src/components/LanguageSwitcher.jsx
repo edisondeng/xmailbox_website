@@ -1,11 +1,9 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useTranslation } from 'react-i18next';
 
 const LanguageSwitcher = () => {
   const { language, switchLanguage, languages } = useLanguage();
-  const { t } = useTranslation('common');
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 

@@ -142,7 +142,6 @@ function ProductPage() {
               scale: { duration: 0.2 }
             }}
             whileHover={{
-              cursor: 'pointer', // This does not apply here as Framer Motion does not handle 'cursor' in animation props
               scale: 1.05,
               transition: { duration: 0.5 },
             }}
